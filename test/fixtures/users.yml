@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  username: MyString
+  full_name: MyString
+  menu_code: MyString
+  custom_settings_form_code: MyString
+  dashboard_code: MyString
+
+two:
+  username: MyString
+  full_name: MyString
+  menu_code: MyString
+  custom_settings_form_code: MyString
+  dashboard_code: MyString

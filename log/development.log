@@ -1,0 +1,2399 @@
+Started GET "/" for ::1 at 2022-01-05 15:27:53 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/railties-7.0.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/railties-7.0.0/lib/rails/templates/rails/welcome/index.html.erb (Duration: 57.6ms | Allocations: 688)
+Completed 200 OK in 262ms (Views: 119.5ms | ActiveRecord: 0.0ms | Allocations: 6647)
+
+
+  [1m[35m (31.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (9.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2672881234260267030)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20220105203455)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (19.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "full_name" character varying, "menu_code" character varying, "custom_settings_form_code" character varying, "dashboard_code" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220105203455"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (3.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-01-05 20:39:16.437684"], ["updated_at", "2022-01-05 20:39:16.437684"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(2672881234260267030)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2022-01-05 15:46:08 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/railties-7.0.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/railties-7.0.0/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.5ms | Allocations: 357)
+Completed 200 OK in 7ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 1089)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2672881234260267030)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateLoads (20220105210551)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2672881234260267030)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2672881234260267030)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateMessages (20220105210720)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (14.4ms)[0m  [1m[35mCREATE TABLE "messages" ("id" bigserial primary key, "direction" character varying, "username" character varying, "message_type" character varying, "body" character varying, "composed_at" character varying, "platform_received_at" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220105210720"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (3.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2672881234260267030)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2672881234260267030)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateLoads (20220105214140)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2672881234260267030)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2672881234260267030)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateLoads (20220105214140)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2672881234260267030)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2672881234260267030)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateLoads (20220105214140)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (10.1ms)[0m  [1m[35mCREATE TABLE "loads" ("id" character varying, "display_identifier" character varying, "sort" integer, "order_number" character varying, "load_status" character varying, "load_status_label" character varying, "active" boolean, "current" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220105214140"]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.9ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2672881234260267030)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (2.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "full_name", "menu_code", "custom_settings_form_code", "dashboard_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["username", "TAYLORWS"], ["full_name", "TAYLORWS"], ["menu_code", "TWS-MENU"], ["custom_settings_form_code", "SETTINGS"], ["dashboard_code", "TWS-DASHBOARD"], ["created_at", "2022-01-05 21:58:26.638134"], ["updated_at", "2022-01-05 21:58:26.638134"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "full_name", "menu_code", "custom_settings_form_code", "dashboard_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["username", "TAYLORWS"], ["full_name", "TAYLORWS"], ["menu_code", "TWS-MENU"], ["custom_settings_form_code", "SETTINGS"], ["dashboard_code", "TWS-DASHBOARD"], ["created_at", "2022-01-05 22:00:20.318031"], ["updated_at", "2022-01-05 22:00:20.318031"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2672881234260267030)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_advisory_unlock(2672881234260267030)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2672881234260267030)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateLoads (20220105221458)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2672881234260267030)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2672881234260267030)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateLoads (20220105221458)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.4ms)[0m  [1m[35mCREATE TABLE "loads" ("id" character varying, "display_identifier" character varying, "sort" integer, "order_number" character varying, "load_status" character varying, "load_status_label" character varying, "active" boolean, "current" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2672881234260267030)[0m
+Started GET "/logins/loginpage" for ::1 at 2022-01-06 11:49:10 -0500
+Started GET "/" for ::1 at 2022-01-06 11:49:10 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20220105221458_create_loads.rb
+
+
+):
+  
+activerecord (7.0.0) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.0) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.0) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.0) lib/active_record/migration.rb:597:in `block in call'
+activerecord (7.0.0) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.0) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.0) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.0) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.0) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.0) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.0) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.0) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.0) lib/rails/engine.rb:530:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[36mActiveRecord::SchemaMigration Pluck (35.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20220105221458_create_loads.rb
+
+
+):
+  
+activerecord (7.0.0) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.0) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.0) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.0) lib/active_record/migration.rb:597:in `block in call'
+activerecord (7.0.0) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.0) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.0) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.0) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.0) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.0) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.0) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.0) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.0) lib/rails/engine.rb:530:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/favicon.ico" for ::1 at 2022-01-06 11:49:12 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20220105221458_create_loads.rb
+
+
+):
+  
+activerecord (7.0.0) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.0) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.0) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.0) lib/active_record/migration.rb:597:in `block in call'
+activerecord (7.0.0) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.0) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.0) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.0) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.0) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.0) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.0) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.0) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.0) lib/rails/engine.rb:530:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2672881234260267030)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateLoads (20220105221458)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (17.2ms)[0m  [1m[35mCREATE TABLE "loads" ("id" character varying, "display_identifier" character varying, "sort" integer, "order_number" character varying, "load_status" character varying, "load_status_label" character varying, "active" boolean, "current" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2672881234260267030)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (3.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (5413.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "WebServiceDB"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (2.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (307.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "WebServiceDB"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "WebServiceDB"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "WebServiceDB"[0m
+  [1m[35m (1032.5ms)[0m  [1m[35mCREATE DATABASE "WebServiceDB" ENCODING = 'utf8'[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE DATABASE "WebServiceDB" ENCODING = 'utf8'[0m
+  [1m[35m (55.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (8.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2672881234260267030)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20220105203455)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (12.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "full_name" character varying, "menu_code" character varying, "custom_settings_form_code" character varying, "dashboard_code" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220105203455"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateMessages (20220105210720)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (9.7ms)[0m  [1m[35mCREATE TABLE "messages" ("id" bigserial primary key, "direction" character varying, "username" character varying, "message_type" character varying, "body" character varying, "composed_at" character varying, "platform_received_at" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220105210720"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateLoads (20220105221458)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "loads" ("id" character varying, "display_identifier" character varying, "sort" integer, "order_number" character varying, "load_status" character varying, "load_status_label" character varying, "active" boolean, "current" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220105221458"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (2.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-01-06 16:53:31.664671"], ["updated_at", "2022-01-06 16:53:31.664671"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(2672881234260267030)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2022-01-06 11:54:04 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/railties-7.0.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/railties-7.0.0/lib/rails/templates/rails/welcome/index.html.erb (Duration: 32.7ms | Allocations: 561)
+Completed 200 OK in 105ms (Views: 38.1ms | ActiveRecord: 0.0ms | Allocations: 5117)
+
+
+Started GET "/authenticate/COLE" for ::1 at 2022-01-06 12:12:03 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/authenticate/COLE"):
+  
+Started GET "/favicon.ico" for ::1 at 2022-01-06 12:12:04 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started PUT "/authenticate/COLE" for ::1 at 2022-01-06 12:12:47 -0500
+  
+ActionController::RoutingError (No route matches [PUT] "/authenticate/COLE"):
+  
+Started PUT "/authenticate/COLE" for ::1 at 2022-01-06 12:17:33 -0500
+  
+SyntaxError (C:/RubyWebService/eleos-web-service-ruby/config/routes.rb:4: syntax error, unexpected ':', expecting `end'
+      resource: authenticate
+              ^
+C:/RubyWebService/eleos-web-service-ruby/config/routes.rb:7: syntax error, unexpected `end', expecting end-of-input):
+  
+config/routes.rb:4: syntax error, unexpected ':', expecting `end'
+config/routes.rb:7: syntax error, unexpected `end', expecting end-of-input
+config/routes.rb:4: syntax error, unexpected ':', expecting `end'
+config/routes.rb:7: syntax error, unexpected `end', expecting end-of-input
+Started PUT "/authenticate/COLE" for ::1 at 2022-01-06 12:17:58 -0500
+  
+ArgumentError ('Api/V1/authenticates' is not a supported controller name. This can lead to potential routing problems. See https://guides.rubyonrails.org/routing.html#specifying-a-controller-to-use):
+  
+config/routes.rb:4:in `block (3 levels) in <main>'
+config/routes.rb:3:in `block (2 levels) in <main>'
+config/routes.rb:2:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started PUT "/user/COLE" for ::1 at 2022-01-06 12:21:04 -0500
+  
+ArgumentError ('Api/V1/users' is not a supported controller name. This can lead to potential routing problems. See https://guides.rubyonrails.org/routing.html#specifying-a-controller-to-use):
+  
+config/routes.rb:4:in `block (3 levels) in <main>'
+config/routes.rb:3:in `block (2 levels) in <main>'
+config/routes.rb:2:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/user/COLE" for ::1 at 2022-01-06 12:23:03 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/user/COLE"):
+  
+Started GET "/user/1" for ::1 at 2022-01-06 12:23:47 -0500
+  
+ArgumentError ('Api/V1/users' is not a supported controller name. This can lead to potential routing problems. See https://guides.rubyonrails.org/routing.html#specifying-a-controller-to-use):
+  
+config/routes.rb:4:in `block (3 levels) in <main>'
+config/routes.rb:3:in `block (2 levels) in <main>'
+config/routes.rb:2:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/user/1" for ::1 at 2022-01-06 12:27:15 -0500
+  
+ArgumentError ('Api/V1/user' is not a supported controller name. This can lead to potential routing problems. See https://guides.rubyonrails.org/routing.html#specifying-a-controller-to-use):
+  
+config/routes.rb:4:in `block (3 levels) in <main>'
+config/routes.rb:3:in `block (2 levels) in <main>'
+config/routes.rb:2:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/users" for ::1 at 2022-01-06 12:29:17 -0500
+  
+ArgumentError ('Api/V1/users' is not a supported controller name. This can lead to potential routing problems. See https://guides.rubyonrails.org/routing.html#specifying-a-controller-to-use):
+  
+config/routes.rb:4:in `block (3 levels) in <main>'
+config/routes.rb:3:in `block (2 levels) in <main>'
+config/routes.rb:2:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/users" for ::1 at 2022-01-06 12:30:27 -0500
+  
+ArgumentError ('Api/V1/users' is not a supported controller name. This can lead to potential routing problems. See https://guides.rubyonrails.org/routing.html#specifying-a-controller-to-use):
+  
+config/routes.rb:4:in `block (3 levels) in <main>'
+config/routes.rb:3:in `block (2 levels) in <main>'
+config/routes.rb:2:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/users" for ::1 at 2022-01-06 12:31:19 -0500
+  
+ArgumentError ('Api/V1/users' is not a supported controller name. This can lead to potential routing problems. See https://guides.rubyonrails.org/routing.html#specifying-a-controller-to-use):
+  
+config/routes.rb:4:in `block (3 levels) in <main>'
+config/routes.rb:3:in `block (2 levels) in <main>'
+config/routes.rb:2:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/user/1" for ::1 at 2022-01-06 12:31:30 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/user/1"):
+  
+Started GET "/users" for ::1 at 2022-01-06 12:32:06 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/authenticate/COLE" for ::1 at 2022-01-06 12:32:20 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/authenticate/COLE"):
+  
+Started GET "/users" for ::1 at 2022-01-06 12:32:28 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users" for ::1 at 2022-01-06 12:44:05 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/api/v1/users" for ::1 at 2022-01-06 12:44:44 -0500
+  
+Zeitwerk::NameError (wrong constant name V1.0 inferred by Module from directory
+
+  C:/RubyWebService/eleos-web-service-ruby/app/controllers/api/v1.0
+
+Possible ways to address this:
+
+  * Tell Zeitwerk to ignore this particular directory.
+  * Tell Zeitwerk to ignore one of its parent directories.
+  * Rename the directory to comply with the naming conventions.
+  * Modify the inflector to handle this case.
+):
+  
+zeitwerk (2.5.3) lib/zeitwerk/loader.rb:354:in `rescue in block in set_autoloads_in_dir'
+zeitwerk (2.5.3) lib/zeitwerk/loader.rb:330:in `block in set_autoloads_in_dir'
+zeitwerk (2.5.3) lib/zeitwerk/loader/helpers.rb:26:in `block in ls'
+zeitwerk (2.5.3) lib/zeitwerk/loader/helpers.rb:18:in `each_child'
+zeitwerk (2.5.3) lib/zeitwerk/loader/helpers.rb:18:in `ls'
+zeitwerk (2.5.3) lib/zeitwerk/loader.rb:329:in `set_autoloads_in_dir'
+zeitwerk (2.5.3) lib/zeitwerk/loader/callbacks.rb:76:in `block in on_namespace_loaded'
+zeitwerk (2.5.3) lib/zeitwerk/loader/callbacks.rb:75:in `each'
+zeitwerk (2.5.3) lib/zeitwerk/loader/callbacks.rb:75:in `on_namespace_loaded'
+zeitwerk (2.5.3) lib/zeitwerk/loader/callbacks.rb:60:in `block in on_dir_autoloaded'
+zeitwerk (2.5.3) lib/zeitwerk/loader/callbacks.rb:46:in `synchronize'
+zeitwerk (2.5.3) lib/zeitwerk/loader/callbacks.rb:46:in `on_dir_autoloaded'
+zeitwerk (2.5.3) lib/zeitwerk/kernel.rb:31:in `require'
+activesupport (7.0.0) lib/active_support/inflector/methods.rb:280:in `const_get'
+activesupport (7.0.0) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (7.0.0) lib/active_support/core_ext/string/inflections.rb:74:in `constantize'
+actionpack (7.0.0) lib/action_dispatch/http/request.rb:90:in `controller_class_for'
+actionpack (7.0.0) lib/action_dispatch/request/utils.rb:95:in `action_encoding_template'
+actionpack (7.0.0) lib/action_dispatch/request/utils.rb:83:in `encode'
+actionpack (7.0.0) lib/action_dispatch/request/utils.rb:45:in `set_binary_encoding'
+actionpack (7.0.0) lib/action_dispatch/http/parameters.rb:68:in `path_parameters='
+actionpack (7.0.0) lib/action_dispatch/journey/router.rb:48:in `block in serve'
+actionpack (7.0.0) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.0) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.0) lib/action_dispatch/routing/route_set.rb:850:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (7.0.0) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.0) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.0) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.0) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.0) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.0) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.0) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.0) lib/rails/engine.rb:530:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/api/v1/users" for ::1 at 2022-01-06 12:44:57 -0500
+  
+Zeitwerk::NameError (wrong constant name V1.0 inferred by Module from directory
+
+  C:/RubyWebService/eleos-web-service-ruby/app/controllers/api/v1.0
+
+Possible ways to address this:
+
+  * Tell Zeitwerk to ignore this particular directory.
+  * Tell Zeitwerk to ignore one of its parent directories.
+  * Rename the directory to comply with the naming conventions.
+  * Modify the inflector to handle this case.
+):
+  
+zeitwerk (2.5.3) lib/zeitwerk/loader.rb:354:in `rescue in block in set_autoloads_in_dir'
+zeitwerk (2.5.3) lib/zeitwerk/loader.rb:330:in `block in set_autoloads_in_dir'
+zeitwerk (2.5.3) lib/zeitwerk/loader/helpers.rb:26:in `block in ls'
+zeitwerk (2.5.3) lib/zeitwerk/loader/helpers.rb:18:in `each_child'
+zeitwerk (2.5.3) lib/zeitwerk/loader/helpers.rb:18:in `ls'
+zeitwerk (2.5.3) lib/zeitwerk/loader.rb:329:in `set_autoloads_in_dir'
+zeitwerk (2.5.3) lib/zeitwerk/loader/callbacks.rb:76:in `block in on_namespace_loaded'
+zeitwerk (2.5.3) lib/zeitwerk/loader/callbacks.rb:75:in `each'
+zeitwerk (2.5.3) lib/zeitwerk/loader/callbacks.rb:75:in `on_namespace_loaded'
+zeitwerk (2.5.3) lib/zeitwerk/loader/callbacks.rb:60:in `block in on_dir_autoloaded'
+zeitwerk (2.5.3) lib/zeitwerk/loader/callbacks.rb:46:in `synchronize'
+zeitwerk (2.5.3) lib/zeitwerk/loader/callbacks.rb:46:in `on_dir_autoloaded'
+zeitwerk (2.5.3) lib/zeitwerk/kernel.rb:31:in `require'
+activesupport (7.0.0) lib/active_support/inflector/methods.rb:280:in `const_get'
+activesupport (7.0.0) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (7.0.0) lib/active_support/core_ext/string/inflections.rb:74:in `constantize'
+actionpack (7.0.0) lib/action_dispatch/http/request.rb:90:in `controller_class_for'
+actionpack (7.0.0) lib/action_dispatch/request/utils.rb:95:in `action_encoding_template'
+actionpack (7.0.0) lib/action_dispatch/request/utils.rb:83:in `encode'
+actionpack (7.0.0) lib/action_dispatch/request/utils.rb:45:in `set_binary_encoding'
+actionpack (7.0.0) lib/action_dispatch/http/parameters.rb:68:in `path_parameters='
+actionpack (7.0.0) lib/action_dispatch/journey/router.rb:48:in `block in serve'
+actionpack (7.0.0) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.0) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.0) lib/action_dispatch/routing/route_set.rb:850:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (7.0.0) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.0) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.0) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.0) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.0) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.0) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.0) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.0) lib/rails/engine.rb:530:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/api/v1/users" for ::1 at 2022-01-06 12:45:39 -0500
+  
+ArgumentError ('api/v1.0/users' is not a supported controller name. This can lead to potential routing problems. See https://guides.rubyonrails.org/routing.html#specifying-a-controller-to-use):
+  
+config/routes.rb:4:in `block (3 levels) in <main>'
+config/routes.rb:3:in `block (2 levels) in <main>'
+config/routes.rb:2:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/api/v1.0/users" for ::1 at 2022-01-06 12:45:47 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1.0/users"):
+  
+Started GET "/api/v1/users" for ::1 at 2022-01-06 12:45:54 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/users"):
+  
+Started GET "/api/v1/users" for ::1 at 2022-01-06 12:46:30 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "composed_at"=>"idk know", "body"=>"How are you ylololololololol???", "platform_received_at"=>"2018-01-16T16:34:12+00:00", "user"=>{"username"=>"CHIP"}}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY id DESC[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+Completed 200 OK in 50ms (Views: 38.6ms | ActiveRecord: 49.0ms | Allocations: 6440)
+
+
+Started GET "/api/v1/user/COLE" for ::1 at 2022-01-06 12:47:35 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/user/COLE"):
+  
+Started GET "/api/v1/user/COLE" for ::1 at 2022-01-06 12:48:42 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/user/COLE"):
+  
+Started GET "/api/v1/users/COLE" for ::1 at 2022-01-06 12:48:48 -0500
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "composed_at"=>"idk know", "body"=>"How are you ylololololololol???", "platform_received_at"=>"2018-01-16T16:34:12+00:00", "id"=>"COLE", "user"=>{"username"=>"CHIP"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `show'
+Completed 404 Not Found in 25ms (ActiveRecord: 6.3ms | Allocations: 1297)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=CHIP):
+  
+app/controllers/api/v1/users_controller.rb:9:in `show'
+Started GET "/api/v1/user/1" for ::1 at 2022-01-06 12:50:11 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/user/1"):
+  
+Started GET "/api/v1/users/1" for ::1 at 2022-01-06 12:53:20 -0500
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "composed_at"=>"idk know", "body"=>"How are you ylololololololol???", "platform_received_at"=>"2018-01-16T16:34:12+00:00", "id"=>"1", "user"=>{"username"=>"CHIP"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `show'
+Completed 200 OK in 57ms (Views: 1.0ms | ActiveRecord: 9.4ms | Allocations: 2083)
+
+
+Started GET "/api/v1/users/COLE" for ::1 at 2022-01-06 12:53:38 -0500
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "composed_at"=>"idk know", "body"=>"How are you ylololololololol???", "platform_received_at"=>"2018-01-16T16:34:12+00:00", "id"=>"COLE", "user"=>{"username"=>"CHIP"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `show'
+Completed 404 Not Found in 6ms (ActiveRecord: 6.7ms | Allocations: 715)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=CHIP):
+  
+app/controllers/api/v1/users_controller.rb:10:in `show'
+Started GET "/api/v1/users/CHIP" for ::1 at 2022-01-06 12:53:51 -0500
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "composed_at"=>"idk know", "body"=>"How are you ylololololololol???", "platform_received_at"=>"2018-01-16T16:34:12+00:00", "id"=>"CHIP", "user"=>{"username"=>"CHIP"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `show'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms | Allocations: 561)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=CHIP):
+  
+app/controllers/api/v1/users_controller.rb:10:in `show'
+Started GET "/api/v1/users/TAYLORWS" for ::1 at 2022-01-06 12:54:04 -0500
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "composed_at"=>"idk know", "body"=>"How are you ylololololololol???", "platform_received_at"=>"2018-01-16T16:34:12+00:00", "id"=>"TAYLORWS", "user"=>{"username"=>"CHIP"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `show'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms | Allocations: 553)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=CHIP):
+  
+app/controllers/api/v1/users_controller.rb:10:in `show'
+Started GET "/api/v1/users/TAYLORWS" for ::1 at 2022-01-06 12:57:11 -0500
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "composed_at"=>"idk know", "body"=>"How are you ylololololololol???", "platform_received_at"=>"2018-01-16T16:34:12+00:00", "id"=>"TAYLORWS", "user"=>{"username"=>"CHIP"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "TAYLORWS"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `show'
+Completed 200 OK in 19ms (Views: 0.6ms | ActiveRecord: 7.3ms | Allocations: 2245)
+
+
+Started GET "/api/v1/users/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc" for ::1 at 2022-01-06 13:39:18 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (4.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/users/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc"):
+  
+Started GET "/api/v1/users/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc" for ::1 at 2022-01-06 13:54:50 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/users/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc"):
+  
+Started GET "/api/v1/authenticate" for ::1 at 2022-01-06 13:56:39 -0500
+Processing by Api::V1::AuthenticateController#index as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "composed_at"=>"idk know", "body"=>"How are you ylololololololol???", "platform_received_at"=>"2018-01-16T16:34:12+00:00", "authenticate"=>{"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "composed_at"=>"idk know", "body"=>"How are you ylololololololol???", "platform_received_at"=>"2018-01-16T16:34:12+00:00"}}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY id DESC[0m
+  ↳ app/controllers/api/v1/authenticate_controller.rb:6:in `index'
+Completed 200 OK in 270ms (Views: 16.3ms | ActiveRecord: 42.3ms | Allocations: 22556)
+
+
+Started GET "/api/v1/authenticate/" for ::1 at 2022-01-06 13:56:59 -0500
+Processing by Api::V1::AuthenticateController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY id DESC[0m
+  ↳ app/controllers/api/v1/authenticate_controller.rb:6:in `index'
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.9ms | Allocations: 1160)
+
+
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc" for ::1 at 2022-01-06 14:59:00 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc"):
+  
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc" for ::1 at 2022-01-06 15:02:47 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc"):
+  
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc" for ::1 at 2022-01-06 15:03:58 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc"):
+  
+Started GET "/api/v1/authenticate/token" for ::1 at 2022-01-06 15:04:12 -0500
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"token"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 1ms (Allocations: 130)
+
+
+  
+JWT::DecodeError (Not enough or too many segments):
+  
+app/controllers/api/v1/authenticate_controller.rb:11:in `show'
+Started GET "/api/v1/authenticate/token" for ::1 at 2022-01-06 15:05:22 -0500
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"token"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 11ms (Allocations: 1970)
+
+
+  
+NameError (undefined local variable or method `pramas' for #<Api::V1::AuthenticateController:0x000000000200a8>
+Did you mean?  params):
+  
+app/controllers/api/v1/authenticate_controller.rb:10:in `show'
+Started GET "/api/v1/authenticate/token" for ::1 at 2022-01-06 15:05:41 -0500
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"token"=>"[FILTERED]"}
+Completed 200 OK in 1ms (Views: 0.3ms | Allocations: 124)
+
+
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc" for ::1 at 2022-01-06 15:05:57 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc"):
+  
+Started GET "/users" for ::1 at 2022-01-06 15:11:28 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/authenticate/" for ::1 at 2022-01-06 15:11:33 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/authenticate"):
+  
+Started GET "/api/v1/authenticate/" for ::1 at 2022-01-06 15:11:57 -0500
+Processing by Api::V1::AuthenticateController#index as HTML
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY id DESC[0m
+  ↳ app/controllers/api/v1/authenticate_controller.rb:6:in `index'
+Completed 200 OK in 545ms (Views: 22.6ms | ActiveRecord: 32.7ms | Allocations: 5519)
+
+
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc" for ::1 at 2022-01-06 15:13:19 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc"):
+  
+Started GET "/api/v1/authenticate/?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc" for ::1 at 2022-01-06 15:16:01 -0500
+Processing by Api::V1::AuthenticateController#index as */*
+  Parameters: {"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc"=>nil}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY id DESC[0m
+  ↳ app/controllers/api/v1/authenticate_controller.rb:6:in `index'
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.5ms | Allocations: 1174)
+
+
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc" for ::1 at 2022-01-06 15:16:15 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc"):
+  
+Started GET "/api/v1/authenticate/?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc" for ::1 at 2022-01-06 15:16:19 -0500
+Processing by Api::V1::AuthenticateController#index as */*
+  Parameters: {"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc"=>nil}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY id DESC[0m
+  ↳ app/controllers/api/v1/authenticate_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.4ms | Allocations: 1168)
+
+
+Started GET "/api/v1/authenticate/?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc" for ::1 at 2022-01-06 15:16:46 -0500
+Processing by Api::V1::AuthenticateController#index as HTML
+  Parameters: {"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc"=>nil}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY id DESC[0m
+  ↳ app/controllers/api/v1/authenticate_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.5ms | Allocations: 1166)
+
+
+Started GET "/api/v1/authenticate/?ttt" for ::1 at 2022-01-06 15:16:52 -0500
+Processing by Api::V1::AuthenticateController#index as HTML
+  Parameters: {"ttt"=>nil}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY id DESC[0m
+  ↳ app/controllers/api/v1/authenticate_controller.rb:6:in `index'
+Completed 200 OK in 7ms (Views: 3.8ms | ActiveRecord: 0.7ms | Allocations: 1151)
+
+
+Started GET "/api/v1/authenticate/" for ::1 at 2022-01-06 15:16:59 -0500
+Processing by Api::V1::AuthenticateController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY id DESC[0m
+  ↳ app/controllers/api/v1/authenticate_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.4ms | Allocations: 1151)
+
+
+Started GET "/api/v1/authenticate/?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc" for ::1 at 2022-01-06 15:18:48 -0500
+Processing by Api::V1::AuthenticateController#index as */*
+  Parameters: {"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc"=>nil}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 136)
+
+
+Started GET "/api/v1/authenticate/?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc" for ::1 at 2022-01-06 15:18:58 -0500
+Processing by Api::V1::AuthenticateController#index as */*
+  Parameters: {"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc"=>nil}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY id DESC[0m
+  ↳ app/controllers/api/v1/authenticate_controller.rb:6:in `index'
+Completed 200 OK in 42ms (Views: 12.3ms | ActiveRecord: 25.3ms | Allocations: 3605)
+
+
+Started GET "/api/v1/authenticate/?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc" for ::1 at 2022-01-06 15:19:14 -0500
+Processing by Api::V1::AuthenticateController#index as */*
+  Parameters: {"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc"=>nil}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY id ASC[0m
+  ↳ app/controllers/api/v1/authenticate_controller.rb:6:in `index'
+Completed 200 OK in 17ms (Views: 6.2ms | ActiveRecord: 5.1ms | Allocations: 3556)
+
+
+Started GET "/api/v1/authenticate/?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc" for ::1 at 2022-01-06 15:23:36 -0500
+Processing by Api::V1::AuthenticateController#index as */*
+  Parameters: {"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc"=>nil}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY id ASC[0m
+  ↳ app/controllers/api/v1/authenticate_controller.rb:6:in `index'
+Completed 200 OK in 20ms (Views: 7.7ms | ActiveRecord: 5.6ms | Allocations: 3552)
+
+
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc" for ::1 at 2022-01-06 15:23:44 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc"):
+  
+Started GET "/api/v1/authenticate/1" for ::1 at 2022-01-06 15:24:17 -0500
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 122)
+
+
+Started GET "/api/v1/authenticate/1" for ::1 at 2022-01-06 15:24:41 -0500
+  
+SyntaxError (C:/RubyWebService/eleos-web-service-ruby/app/controllers/api/v1/authenticate_controller.rb:11: syntax error, unexpected '}', expecting =>
+        render json: {user}
+                          ^
+):
+  
+app/controllers/api/v1/authenticate_controller.rb:11: syntax error, unexpected '}', expecting =>
+app/controllers/api/v1/authenticate_controller.rb:11: syntax error, unexpected '}', expecting =>
+Started GET "/api/v1/authenticate/1" for ::1 at 2022-01-06 15:24:58 -0500
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authenticate_controller.rb:10:in `show'
+Completed 200 OK in 21ms (Views: 0.5ms | ActiveRecord: 6.5ms | Allocations: 3748)
+
+
+Started GET "/api/v1/authenticate/COLE" for ::1 at 2022-01-06 15:41:00 -0500
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"token"=>"[FILTERED]"}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authenticate_controller.rb:10:in `show'
+Completed 404 Not Found in 133ms (ActiveRecord: 22.4ms | Allocations: 3788)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=COLE):
+  
+app/controllers/api/v1/authenticate_controller.rb:10:in `show'
+Started GET "/api/v1/authenticate/COLE" for ::1 at 2022-01-06 15:41:44 -0500
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "COLE"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authenticate_controller.rb:10:in `show'
+Completed 200 OK in 67ms (Views: 5.3ms | ActiveRecord: 31.4ms | Allocations: 3418)
+
+
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc" for ::1 at 2022-01-06 15:43:21 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc"):
+  
+Started GET "/api/v1/authenticate/5" for ::1 at 2022-01-06 15:44:21 -0500
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authenticate_controller.rb:10:in `show'
+Completed 404 Not Found in 20ms (ActiveRecord: 9.2ms | Allocations: 1840)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=5):
+  
+app/controllers/api/v1/authenticate_controller.rb:10:in `show'
+Started GET "/api/v1/authenticate/4" for ::1 at 2022-01-06 15:44:29 -0500
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authenticate_controller.rb:10:in `show'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms | Allocations: 547)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=4):
+  
+app/controllers/api/v1/authenticate_controller.rb:10:in `show'
+Started GET "/api/v1/authenticate/3" for ::1 at 2022-01-06 15:44:30 -0500
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authenticate_controller.rb:10:in `show'
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 1876)
+
+
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc" for ::1 at 2022-01-06 15:50:38 -0500
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"jwt"=>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc"}
+Completed 500 Internal Server Error in 1ms (Allocations: 149)
+
+
+  
+JWT::DecodeError (No verification key available):
+  
+app/controllers/api/v1/authenticate_controller.rb:10:in `show'
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc" for ::1 at 2022-01-06 15:53:48 -0500
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"jwt"=>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc"}
+Completed 500 Internal Server Error in 13ms (Allocations: 1984)
+
+
+  
+NameError (undefined local variable or method `secret' for #<Api::V1::AuthenticateController:0x00000000058250>
+Did you mean?  select):
+  
+app/controllers/api/v1/authenticate_controller.rb:11:in `show'
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc" for ::1 at 2022-01-06 15:54:05 -0500
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"jwt"=>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc"}
+Completed 500 Internal Server Error in 1ms (Allocations: 235)
+
+
+  
+JWT::VerificationError (Signature verification raised):
+  
+app/controllers/api/v1/authenticate_controller.rb:12:in `show'
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc" for ::1 at 2022-01-06 15:56:59 -0500
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"jwt"=>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc"}
+Completed 200 OK in 0ms (Views: 0.1ms | Allocations: 142)
+
+
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc" for ::1 at 2022-01-06 15:57:40 -0500
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"jwt"=>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc"}
+Completed 500 Internal Server Error in 16ms (Allocations: 1810)
+
+
+  
+NoMethodError (undefined method `username' for [{"username"=>"TAYLORWS"}, {"alg"=>"HS256", "typ"=>"JWT"}]:Array):
+  
+app/controllers/api/v1/authenticate_controller.rb:12:in `show'
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc" for ::1 at 2022-01-06 15:59:15 -0500
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"jwt"=>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc"}
+Completed 200 OK in 1ms (Views: 0.2ms | Allocations: 182)
+
+
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc" for ::1 at 2022-01-06 15:59:30 -0500
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"jwt"=>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc"}
+Completed 500 Internal Server Error in 4ms (Allocations: 1285)
+
+
+  
+NoMethodError (undefined method `username' for [{"username"=>"TAYLORWS"}, {"alg"=>"HS256", "typ"=>"JWT"}]:Array):
+  
+app/controllers/api/v1/authenticate_controller.rb:12:in `show'
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc" for ::1 at 2022-01-06 15:59:55 -0500
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"jwt"=>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc"}
+Completed 500 Internal Server Error in 7ms (Allocations: 1844)
+
+
+  
+NoMethodError (undefined method `decoded_token' for #<Api::V1::AuthenticateController:0x0000000006fd10>):
+  
+app/controllers/api/v1/authenticate_controller.rb:12:in `show'
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc" for ::1 at 2022-01-06 16:00:16 -0500
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"jwt"=>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc"}
+Completed 200 OK in 1ms (Views: 0.2ms | Allocations: 181)
+
+
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc" for ::1 at 2022-01-06 16:00:40 -0500
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"jwt"=>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc"}
+Completed 500 Internal Server Error in 10ms (Allocations: 1843)
+
+
+  
+NoMethodError (undefined method `decoded_token' for #<Api::V1::AuthenticateController:0x00000000077c68>):
+  
+app/controllers/api/v1/authenticate_controller.rb:12:in `show'
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc" for ::1 at 2022-01-06 16:00:49 -0500
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"jwt"=>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc"}
+Completed 200 OK in 1ms (Views: 0.4ms | Allocations: 182)
+
+
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc" for ::1 at 2022-01-06 16:12:24 -0500
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"jwt"=>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc"}
+Completed 500 Internal Server Error in 0ms (Allocations: 151)
+
+
+  
+TypeError (no implicit conversion of Symbol into Integer):
+  
+app/controllers/api/v1/authenticate_controller.rb:12:in `show'
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc" for ::1 at 2022-01-06 16:14:37 -0500
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"jwt"=>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc"}
+Completed 500 Internal Server Error in 13ms (Allocations: 2008)
+
+
+  
+NameError (undefined local variable or method `username' for #<Api::V1::AuthenticateController:0x00000000083ce8>):
+  
+app/controllers/api/v1/authenticate_controller.rb:12:in `show'
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc" for ::1 at 2022-01-06 16:15:09 -0500
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"jwt"=>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc"}
+Completed 500 Internal Server Error in 0ms (Allocations: 151)
+
+
+  
+TypeError (no implicit conversion of Symbol into Integer):
+  
+app/controllers/api/v1/authenticate_controller.rb:12:in `show'
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc" for ::1 at 2022-01-06 16:15:31 -0500
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"jwt"=>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc"}
+Completed 500 Internal Server Error in 3ms (Allocations: 1285)
+
+
+  
+NoMethodError (undefined method `username' for [{"username"=>"TAYLORWS"}, {"alg"=>"HS256", "typ"=>"JWT"}]:Array):
+  
+app/controllers/api/v1/authenticate_controller.rb:12:in `show'
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc" for ::1 at 2022-01-06 16:17:52 -0500
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"jwt"=>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc"}
+Completed 500 Internal Server Error in 14ms (Allocations: 2532)
+
+
+  
+NameError (undefined local variable or method `username' for #<Api::V1::AuthenticateController:0x0000000008fef8>):
+  
+app/controllers/api/v1/authenticate_controller.rb:12:in `show'
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc" for ::1 at 2022-01-06 16:18:53 -0500
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"jwt"=>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc"}
+Completed 200 OK in 1ms (Views: 0.2ms | Allocations: 182)
+
+
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc" for ::1 at 2022-01-06 16:21:50 -0500
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"jwt"=>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc"}
+Completed 500 Internal Server Error in 1ms (Allocations: 153)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/api/v1/authenticate_controller.rb:12:in `[]'
+app/controllers/api/v1/authenticate_controller.rb:12:in `show'
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc" for ::1 at 2022-01-06 16:22:16 -0500
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"jwt"=>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc"}
+Completed 200 OK in 1ms (Views: 0.2ms | Allocations: 181)
+
+
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc" for ::1 at 2022-01-06 16:24:23 -0500
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"jwt"=>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc"}
+Completed 200 OK in 1ms (Views: 0.3ms | Allocations: 161)
+
+
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc" for ::1 at 2022-01-06 16:24:25 -0500
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"jwt"=>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc"}
+Completed 200 OK in 0ms (Views: 0.2ms | Allocations: 161)
+
+
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc" for ::1 at 2022-01-06 16:34:21 -0500
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"jwt"=>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc"}
+Completed 200 OK in 1ms (Views: 0.2ms | Allocations: 141)
+
+
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc" for ::1 at 2022-01-06 16:34:43 -0500
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"jwt"=>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc"}
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "TAYLORWS"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authenticate_controller.rb:12:in `show'
+Completed 200 OK in 167ms (Views: 0.6ms | ActiveRecord: 54.5ms | Allocations: 5381)
+
+
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc" for ::1 at 2022-01-06 16:37:47 -0500
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"jwt"=>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "TAYLORWS"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authenticate_controller.rb:7:in `show'
+Completed 200 OK in 51ms (Views: 0.2ms | ActiveRecord: 37.9ms | Allocations: 3305)
+
+
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc" for ::1 at 2022-01-06 16:37:59 -0500
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"jwt"=>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "TAYLORWS"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authenticate_controller.rb:7:in `show'
+Completed 200 OK in 17ms (Views: 0.2ms | ActiveRecord: 5.0ms | Allocations: 3298)
+
+
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc" for ::1 at 2022-01-06 16:38:08 -0500
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"jwt"=>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "TAYLORWS"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authenticate_controller.rb:7:in `show'
+Completed 200 OK in 31ms (Views: 4.5ms | ActiveRecord: 8.9ms | Allocations: 3394)
+
+
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc" for ::1 at 2022-01-06 16:39:45 -0500
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"jwt"=>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "TAYLORWS"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authenticate_controller.rb:7:in `show'
+Completed 200 OK in 21ms (Views: 0.6ms | ActiveRecord: 4.9ms | Allocations: 3418)
+
+
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc" for ::1 at 2022-01-06 16:40:20 -0500
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"jwt"=>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 237)
+
+
+  
+SyntaxError (C:/RubyWebService/eleos-web-service-ruby/app/models/user.rb:7: syntax error, unexpected `true', expecting `do' or '{' or '('
+...dates :api_token, presence true
+...                           ^~~~
+):
+  
+app/models/user.rb:7: syntax error, unexpected `true', expecting `do' or '{' or '('
+app/models/user.rb:7: syntax error, unexpected `true', expecting `do' or '{' or '('
+app/controllers/api/v1/authenticate_controller.rb:7:in `show'
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc" for ::1 at 2022-01-06 16:40:44 -0500
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"jwt"=>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "TAYLORWS"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authenticate_controller.rb:7:in `show'
+Completed 200 OK in 25ms (Views: 0.6ms | ActiveRecord: 7.2ms | Allocations: 3465)
+
+
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc" for ::1 at 2022-01-06 16:42:24 -0500
+  
+SyntaxError (C:/RubyWebService/eleos-web-service-ruby/app/controllers/api/v1/authenticate_controller.rb:8: syntax error, unexpected ',', expecting =>
+...en = JWT.encode({user.username, user.full_name}, nil, false)
+...                              ^
+C:/RubyWebService/eleos-web-service-ruby/app/controllers/api/v1/authenticate_controller.rb:8: syntax error, unexpected '}', expecting `end'
+...{user.username, user.full_name}, nil, false)
+...                              ^
+C:/RubyWebService/eleos-web-service-ruby/app/controllers/api/v1/authenticate_controller.rb:8: Can't assign to nil
+....username, user.full_name}, nil, false)
+...                            ^~~
+C:/RubyWebService/eleos-web-service-ruby/app/controllers/api/v1/authenticate_controller.rb:8: Can't assign to false
+...me, user.full_name}, nil, false)
+...                          ^~~~~
+C:/RubyWebService/eleos-web-service-ruby/app/controllers/api/v1/authenticate_controller.rb:8: syntax error, unexpected ')', expecting '='
+...e, user.full_name}, nil, false)
+...                              ^
+):
+  
+app/controllers/api/v1/authenticate_controller.rb:8: syntax error, unexpected ',', expecting =>
+app/controllers/api/v1/authenticate_controller.rb:8: syntax error, unexpected '}', expecting `end'
+app/controllers/api/v1/authenticate_controller.rb:8: Can't assign to nil
+app/controllers/api/v1/authenticate_controller.rb:8: Can't assign to false
+app/controllers/api/v1/authenticate_controller.rb:8: syntax error, unexpected ')', expecting '='
+app/controllers/api/v1/authenticate_controller.rb:8: syntax error, unexpected ',', expecting =>
+app/controllers/api/v1/authenticate_controller.rb:8: syntax error, unexpected '}', expecting `end'
+app/controllers/api/v1/authenticate_controller.rb:8: Can't assign to nil
+app/controllers/api/v1/authenticate_controller.rb:8: Can't assign to false
+app/controllers/api/v1/authenticate_controller.rb:8: syntax error, unexpected ')', expecting '='
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc" for ::1 at 2022-01-06 16:42:47 -0500
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"jwt"=>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "TAYLORWS"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authenticate_controller.rb:7:in `show'
+Completed 200 OK in 29ms (Views: 1.1ms | ActiveRecord: 8.2ms | Allocations: 3459)
+
+
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2672881234260267030)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddApiTokenToUser (20220106214749)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (10.5ms)[0m  [1m[35mALTER TABLE "users" ADD "api_token" character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220106214749"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2672881234260267030)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc" for ::1 at 2022-01-06 17:02:31 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"jwt"=>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRBWUxPUldTIn0.rpW86jaK59Hz2rQRU_ViHDFOc0BaP8fbq1fWFbQ9nrc"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "TAYLORWS"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authenticate_controller.rb:7:in `show'
+Completed 200 OK in 26ms (Views: 8.5ms | ActiveRecord: 2.8ms | Allocations: 3162)
+
+
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IlRBWUxPUldTIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6IlRBWUxPUldTIn0.o851GwN1p-JNAGIzF0QkbwKQ1vQWQykO5kdDPsMIFv4" for ::1 at 2022-01-06 17:03:38 -0500
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"jwt"=>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IlRBWUxPUldTIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6IlRBWUxPUldTIn0.o851GwN1p-JNAGIzF0QkbwKQ1vQWQykO5kdDPsMIFv4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authenticate_controller.rb:7:in `show'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 718)
+
+
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IlRBWUxPUldTIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6IlRBWUxPUldTIn0.o851GwN1p-JNAGIzF0QkbwKQ1vQWQykO5kdDPsMIFv4" for ::1 at 2022-01-06 17:04:23 -0500
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"jwt"=>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IlRBWUxPUldTIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6IlRBWUxPUldTIn0.o851GwN1p-JNAGIzF0QkbwKQ1vQWQykO5kdDPsMIFv4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authenticate_controller.rb:7:in `show'
+Completed 200 OK in 18ms (Views: 0.2ms | ActiveRecord: 11.5ms | Allocations: 2075)
+
+
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IlRBWUxPUldTIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6IlRBWUxPUldTIn0.o851GwN1p-JNAGIzF0QkbwKQ1vQWQykO5kdDPsMIFv4" for ::1 at 2022-01-06 17:04:54 -0500
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"jwt"=>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IlRBWUxPUldTIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6IlRBWUxPUldTIn0.o851GwN1p-JNAGIzF0QkbwKQ1vQWQykO5kdDPsMIFv4"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "TAYLORWS"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authenticate_controller.rb:7:in `show'
+Completed 200 OK in 42ms (Views: 1.3ms | ActiveRecord: 13.5ms | Allocations: 5010)
+
+
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IlRBWUxPUldTIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6IlRBWUxPUldTIn0.o851GwN1p-JNAGIzF0QkbwKQ1vQWQykO5kdDPsMIFv4" for ::1 at 2022-01-06 17:05:16 -0500
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"jwt"=>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IlRBWUxPUldTIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6IlRBWUxPUldTIn0.o851GwN1p-JNAGIzF0QkbwKQ1vQWQykO5kdDPsMIFv4"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "TAYLORWS"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authenticate_controller.rb:7:in `show'
+Completed 200 OK in 5ms (Views: 0.9ms | ActiveRecord: 0.6ms | Allocations: 744)
+
+
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IlRBWUxPUldTIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6IlRBWUxPUldTIn0.o851GwN1p-JNAGIzF0QkbwKQ1vQWQykO5kdDPsMIFv4" for ::1 at 2022-01-06 17:05:24 -0500
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"jwt"=>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IlRBWUxPUldTIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6IlRBWUxPUldTIn0.o851GwN1p-JNAGIzF0QkbwKQ1vQWQykO5kdDPsMIFv4"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "TAYLORWS"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authenticate_controller.rb:7:in `show'
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.5ms | Allocations: 744)
+
+
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IlRBWUxPUldTIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6IlRBWUxPUldTIn0.o851GwN1p-JNAGIzF0QkbwKQ1vQWQykO5kdDPsMIFv4" for ::1 at 2022-01-07 12:51:54 -0500
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"jwt"=>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IlRBWUxPUldTIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6IlRBWUxPUldTIn0.o851GwN1p-JNAGIzF0QkbwKQ1vQWQykO5kdDPsMIFv4"}
+  [1m[36mUser Load (63.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "TAYLORWS"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authenticate_controller.rb:7:in `show'
+Completed 200 OK in 478ms (Views: 14.5ms | ActiveRecord: 181.4ms | Allocations: 3042)
+
+
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IkNISVAifQ.8BclXLXLvTx-pDCeZA9EALcDFQjEOsqhHnwjkQExVvw" for ::1 at 2022-01-07 13:00:14 -0500
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"jwt"=>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IkNISVAifQ.8BclXLXLvTx-pDCeZA9EALcDFQjEOsqhHnwjkQExVvw"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "CHIP"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authenticate_controller.rb:7:in `show'
+Completed 200 OK in 96ms (Views: 0.9ms | ActiveRecord: 15.3ms | Allocations: 3038)
+
+
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IkNISVAifQ.8BclXLXLvTx-pDCeZA9EALcDFQjEOsqhHnwjkQExVvw" for ::1 at 2022-01-07 13:12:38 -0500
+  
+SyntaxError (C:/RubyWebService/eleos-web-service-ruby/app/controllers/api/v1/authenticate_controller.rb:5: dynamic constant assignment
+        ELEOS_PLATFORM_KEY = 'Idontknowyet' #env variab...
+        ^~~~~~~~~~~~~~~~~~
+):
+  
+app/controllers/api/v1/authenticate_controller.rb:5: dynamic constant assignment
+app/controllers/api/v1/authenticate_controller.rb:5: dynamic constant assignment
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IkNISVAifQ.8BclXLXLvTx-pDCeZA9EALcDFQjEOsqhHnwjkQExVvw" for ::1 at 2022-01-07 13:13:36 -0500
+  
+SyntaxError (C:/RubyWebService/eleos-web-service-ruby/app/controllers/api/v1/authenticate_controller.rb:5: dynamic constant assignment
+        ELEOS_PLATFORM_KEY = 'Idontknowyet' #env variab...
+        ^~~~~~~~~~~~~~~~~~
+):
+  
+app/controllers/api/v1/authenticate_controller.rb:5: dynamic constant assignment
+app/controllers/api/v1/authenticate_controller.rb:5: dynamic constant assignment
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IkNISVAifQ.8BclXLXLvTx-pDCeZA9EALcDFQjEOsqhHnwjkQExVvw" for ::1 at 2022-01-07 13:22:54 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (23.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (C:/RubyWebService/eleos-web-service-ruby/app/controllers/api/v1/authenticate_controller.rb:5: dynamic constant assignment
+        ELEOS_PLATFORM_KEY = 'Idontknowyet' #env variab...
+        ^~~~~~~~~~~~~~~~~~
+):
+  
+app/controllers/api/v1/authenticate_controller.rb:5: dynamic constant assignment
+app/controllers/api/v1/authenticate_controller.rb:5: dynamic constant assignment
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IkNISVAifQ.8BclXLXLvTx-pDCeZA9EALcDFQjEOsqhHnwjkQExVvw" for ::1 at 2022-01-07 13:26:23 -0500
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"jwt"=>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IkNISVAifQ.8BclXLXLvTx-pDCeZA9EALcDFQjEOsqhHnwjkQExVvw"}
+  [1m[36mUser Load (16.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "CHIP"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authenticate_controller.rb:11:in `show'
+Completed 200 OK in 248ms (Views: 11.5ms | ActiveRecord: 33.8ms | Allocations: 21210)
+
+
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IkNISVAifQ.8BclXLXLvTx-pDCeZA9EALcDFQjEOsqhHnwjkQExVvw" for ::1 at 2022-01-07 13:26:30 -0500
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"jwt"=>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IkNISVAifQ.8BclXLXLvTx-pDCeZA9EALcDFQjEOsqhHnwjkQExVvw"}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 73)
+
+
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IkNISVAifQ.8BclXLXLvTx-pDCeZA9EALcDFQjEOsqhHnwjkQExVvw" for ::1 at 2022-01-07 13:27:21 -0500
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"jwt"=>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IkNISVAifQ.8BclXLXLvTx-pDCeZA9EALcDFQjEOsqhHnwjkQExVvw"}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 89)
+
+
+Started GET "/api/v1/authenticate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IkNISVAifQ.8BclXLXLvTx-pDCeZA9EALcDFQjEOsqhHnwjkQExVvw" for ::1 at 2022-01-07 13:27:31 -0500
+Processing by Api::V1::AuthenticateController#show as */*
+  Parameters: {"jwt"=>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IkNISVAifQ.8BclXLXLvTx-pDCeZA9EALcDFQjEOsqhHnwjkQExVvw"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "CHIP"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authenticate_controller.rb:11:in `show'
+Completed 200 OK in 18ms (Views: 0.7ms | ActiveRecord: 6.4ms | Allocations: 3613)
+
+
+Started GET "/api/v1/loads" for ::1 at 2022-01-07 13:38:56 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/loads"):
+  
+Started GET "/api/v1/loads" for ::1 at 2022-01-07 13:40:13 -0500
+  
+Zeitwerk::NameError (expected file C:/RubyWebService/eleos-web-service-ruby/app/controllers/api/v1/loads_controller.rb to define constant Api::V1::LoadsController, but didn't):
+  
+zeitwerk (2.5.3) lib/zeitwerk/loader/callbacks.rb:25:in `on_file_autoloaded'
+zeitwerk (2.5.3) lib/zeitwerk/kernel.rb:28:in `require'
+activesupport (7.0.0) lib/active_support/inflector/methods.rb:280:in `const_get'
+activesupport (7.0.0) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (7.0.0) lib/active_support/core_ext/string/inflections.rb:74:in `constantize'
+actionpack (7.0.0) lib/action_dispatch/http/request.rb:90:in `controller_class_for'
+actionpack (7.0.0) lib/action_dispatch/request/utils.rb:95:in `action_encoding_template'
+actionpack (7.0.0) lib/action_dispatch/request/utils.rb:83:in `encode'
+actionpack (7.0.0) lib/action_dispatch/request/utils.rb:45:in `set_binary_encoding'
+actionpack (7.0.0) lib/action_dispatch/http/parameters.rb:68:in `path_parameters='
+actionpack (7.0.0) lib/action_dispatch/journey/router.rb:48:in `block in serve'
+actionpack (7.0.0) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.0) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.0) lib/action_dispatch/routing/route_set.rb:850:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (7.0.0) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.0) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.0) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.0) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.0) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.0) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.0) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.0) lib/rails/engine.rb:530:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/api/v1/loads" for ::1 at 2022-01-07 13:42:34 -0500
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for Api::V1::LoadsController):
+  
+actionpack (7.0.0) lib/abstract_controller/base.rb:146:in `process'
+actionpack (7.0.0) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.0) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.0) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.0) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.0) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.0) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.0) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.0) lib/action_dispatch/routing/route_set.rb:850:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (7.0.0) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.0) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.0) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.0) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.0) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.0) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.0) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.0) lib/rails/engine.rb:530:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/api/v1/loads" for ::1 at 2022-01-07 13:43:18 -0500
+Processing by Api::V1::LoadsController#index as */*
+  [1m[36mLoad Load (1.4ms)[0m  [1m[34mSELECT "loads".* FROM "loads"[0m
+  ↳ app/controllers/api/v1/loads_controller.rb:10:in `index'
+Completed 200 OK in 189ms (Views: 155.9ms | ActiveRecord: 61.2ms | Allocations: 9425)
+
+
+Started GET "/api/v1/loads" for ::1 at 2022-01-07 14:11:21 -0500
+Processing by Api::V1::LoadsController#index as */*
+Completed 500 Internal Server Error in 2ms (Allocations: 608)
+
+
+  
+NoMethodError (undefined method `split' for nil:NilClass):
+  
+app/controllers/api/v1/loads_controller.rb:17:in `index'
+Started GET "/api/v1/loads" for ::1 at 2022-01-07 14:13:04 -0500
+Processing by Api::V1::LoadsController#index as */*
+Completed 500 Internal Server Error in 1ms (Allocations: 601)
+
+
+  
+NoMethodError (undefined method `split' for nil:NilClass):
+  
+app/controllers/api/v1/loads_controller.rb:17:in `index'
+Started GET "/api/v1/loads" for ::1 at 2022-01-07 14:16:19 -0500
+Processing by Api::V1::LoadsController#index as */*
+Completed 500 Internal Server Error in 5ms (Allocations: 601)
+
+
+  
+NoMethodError (undefined method `split' for nil:NilClass):
+  
+app/controllers/api/v1/loads_controller.rb:19:in `index'
+Started GET "/api/v1/loads" for ::1 at 2022-01-07 14:17:16 -0500
+Processing by Api::V1::LoadsController#index as */*
+Completed 500 Internal Server Error in 2ms (Allocations: 601)
+
+
+  
+NoMethodError (undefined method `split' for nil:NilClass):
+  
+app/controllers/api/v1/loads_controller.rb:19:in `index'
+Started GET "/api/v1/loads" for ::1 at 2022-01-07 14:23:13 -0500
+Processing by Api::V1::LoadsController#index as */*
+Completed 500 Internal Server Error in 2ms (Allocations: 602)
+
+
+  
+NoMethodError (undefined method `split' for nil:NilClass):
+  
+app/controllers/api/v1/loads_controller.rb:13:in `getToken'
+app/controllers/api/v1/loads_controller.rb:22:in `index'
+Started GET "/api/v1/loads" for ::1 at 2022-01-07 14:23:40 -0500
+Processing by Api::V1::LoadsController#index as */*
+Completed 500 Internal Server Error in 1ms (Allocations: 600)
+
+
+  
+NoMethodError (undefined method `split' for nil:NilClass):
+  
+app/controllers/api/v1/loads_controller.rb:19:in `index'
+Started GET "/api/v1/loads" for ::1 at 2022-01-07 14:26:08 -0500
+  
+SyntaxError (C:/RubyWebService/eleos-web-service-ruby/app/controllers/api/v1/loads_controller.rb:23: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/api/v1/loads_controller.rb:23: syntax error, unexpected `end', expecting end-of-input
+app/controllers/api/v1/loads_controller.rb:23: syntax error, unexpected `end', expecting end-of-input
+Started GET "/api/v1/loads" for ::1 at 2022-01-07 14:26:25 -0500
+Processing by Api::V1::LoadsController#index as */*
+Completed 200 OK in 0ms (Views: 0.1ms | Allocations: 87)
+
+
+Started GET "/api/v1/loads" for ::1 at 2022-01-07 14:26:47 -0500
+Processing by Api::V1::LoadsController#index as */*
+Completed 200 OK in 1ms (Views: 0.2ms | Allocations: 87)
+
+
+Started GET "/api/v1/loads" for ::1 at 2022-01-07 14:27:17 -0500
+Processing by Api::V1::LoadsController#index as */*
+Completed 200 OK in 1ms (Views: 0.2ms | Allocations: 89)
+
+
+Started GET "/api/v1/loads" for ::1 at 2022-01-07 14:27:40 -0500
+Processing by Api::V1::LoadsController#index as */*
+Completed 200 OK in 0ms (Views: 0.1ms | Allocations: 68)
+
+
+Started GET "/api/v1/loads" for ::1 at 2022-01-07 14:28:01 -0500
+Processing by Api::V1::LoadsController#index as */*
+Completed 200 OK in 0ms (Views: 0.1ms | Allocations: 92)
+
+
+Started GET "/api/v1/loads" for ::1 at 2022-01-07 14:28:12 -0500
+Processing by Api::V1::LoadsController#index as */*
+Completed 200 OK in 0ms (Views: 0.1ms | Allocations: 72)
+
+
+Started GET "/api/v1/loads" for ::1 at 2022-01-07 14:28:18 -0500
+Processing by Api::V1::LoadsController#index as */*
+Completed 200 OK in 0ms (Views: 0.1ms | Allocations: 91)
+
+
+Started GET "/api/v1/loads" for ::1 at 2022-01-07 14:28:53 -0500
+Processing by Api::V1::LoadsController#index as */*
+Completed 500 Internal Server Error in 3ms (Allocations: 597)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/api/v1/loads_controller.rb:17:in `index'
+Started GET "/api/v1/loads" for ::1 at 2022-01-07 14:29:26 -0500
+Processing by Api::V1::LoadsController#index as */*
+Completed 500 Internal Server Error in 2ms (Allocations: 599)
+
+
+  
+NoMethodError (undefined method `split' for nil:NilClass):
+  
+app/controllers/api/v1/loads_controller.rb:17:in `index'
+Started GET "/api/v1/loads" for ::1 at 2022-01-07 14:32:27 -0500
+Processing by Api::V1::LoadsController#index as */*
+Completed 500 Internal Server Error in 27ms (Allocations: 2276)
+
+
+  
+NameError (undefined local variable or method `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9' for #<Api::V1::LoadsController:0x00000000063c18>):
+  
+app/controllers/api/v1/loads_controller.rb:17:in `index'
+Started GET "/api/v1/loads" for ::1 at 2022-01-07 14:33:09 -0500
+Processing by Api::V1::LoadsController#index as */*
+Completed 500 Internal Server Error in 1ms (Allocations: 144)
+
+
+  
+JWT::DecodeError (No verification key available):
+  
+app/controllers/api/v1/loads_controller.rb:5:in `authenticate'
+app/controllers/api/v1/loads_controller.rb:17:in `index'
+Started GET "/api/v1/loads" for ::1 at 2022-01-07 14:33:36 -0500
+Processing by Api::V1::LoadsController#index as */*
+Completed 500 Internal Server Error in 1ms (Allocations: 129)
+
+
+  
+JWT::DecodeError (No verification key available):
+  
+app/controllers/api/v1/loads_controller.rb:5:in `authenticate'
+app/controllers/api/v1/loads_controller.rb:17:in `index'
+Started GET "/api/v1/loads" for ::1 at 2022-01-07 14:33:47 -0500
+Processing by Api::V1::LoadsController#index as */*
+Completed 500 Internal Server Error in 39ms (Allocations: 2274)
+
+
+  
+NameError (undefined local variable or method `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9' for #<Api::V1::LoadsController:0x0000000006cc78>):
+  
+app/controllers/api/v1/loads_controller.rb:17:in `index'
+Started GET "/api/v1/loads" for ::1 at 2022-01-07 14:34:41 -0500
+Processing by Api::V1::LoadsController#index as */*
+Completed 500 Internal Server Error in 51ms (Allocations: 2274)
+
+
+  
+NameError (undefined local variable or method `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9' for #<Api::V1::LoadsController:0x00000000071458>):
+  
+app/controllers/api/v1/loads_controller.rb:17:in `index'
+Started GET "/api/v1/loads" for ::1 at 2022-01-07 14:35:22 -0500
+Processing by Api::V1::LoadsController#index as */*
+Completed 500 Internal Server Error in 30ms (Allocations: 2258)
+
+
+  
+NameError (undefined local variable or method `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9' for #<Api::V1::LoadsController:0x000000000714f8>):
+  
+app/controllers/api/v1/loads_controller.rb:17:in `index'
+Started GET "/api/v1/loads" for ::1 at 2022-01-07 14:40:34 -0500
+Processing by Api::V1::LoadsController#index as */*
+Completed 500 Internal Server Error in 0ms (Allocations: 115)
+
+
+  
+JWT::DecodeError (Nil JSON web token):
+  
+app/controllers/api/v1/loads_controller.rb:5:in `authenticate'
+app/controllers/api/v1/loads_controller.rb:18:in `index'
+Started GET "/api/v1/loads" for ::1 at 2022-01-07 14:41:14 -0500
+Processing by Api::V1::LoadsController#index as */*
+Completed 500 Internal Server Error in 1ms (Allocations: 600)
+
+
+  
+NoMethodError (undefined method `split' for nil:NilClass):
+  
+app/controllers/api/v1/loads_controller.rb:17:in `index'
+Started GET "/api/v1/loads" for ::1 at 2022-01-07 14:48:54 -0500
+Processing by Api::V1::LoadsController#index as */*
+Completed 200 OK in 0ms (Views: 0.1ms | Allocations: 87)
+
+
+Started GET "/api/v1/loads" for ::1 at 2022-01-07 14:49:16 -0500
+Processing by Api::V1::LoadsController#index as */*
+Completed 200 OK in 0ms (Views: 0.1ms | Allocations: 67)
+
+
+Started GET "/api/v1/loads" for ::1 at 2022-01-07 14:49:25 -0500
+Processing by Api::V1::LoadsController#index as */*
+Completed 200 OK in 1ms (Views: 0.2ms | Allocations: 87)
+
+
+Started GET "/api/v1/loads" for ::1 at 2022-01-07 14:50:50 -0500
+Processing by Api::V1::LoadsController#index as */*
+Completed 204 No Content in 61ms (Allocations: 56)
+
+
+Started GET "/api/v1/loads" for ::1 at 2022-01-07 14:51:18 -0500
+Processing by Api::V1::LoadsController#index as */*
+Completed 204 No Content in 0ms (Allocations: 55)
+
+
+Started GET "/api/v1/loads" for ::1 at 2022-01-07 14:52:08 -0500
+Processing by Api::V1::LoadsController#index as */*
+Completed 500 Internal Server Error in 0ms (Allocations: 150)
+
+
+  
+JWT::DecodeError (No verification key available):
+  
+app/controllers/api/v1/loads_controller.rb:5:in `authorize'
+app/controllers/api/v1/loads_controller.rb:18:in `index'
+Started GET "/api/v1/loads" for ::1 at 2022-01-07 14:52:43 -0500
+Processing by Api::V1::LoadsController#index as */*
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "TAYLORWS"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/loads_controller.rb:7:in `authorize'
+Completed 204 No Content in 140ms (ActiveRecord: 17.3ms | Allocations: 5389)
+
+
+Started GET "/api/v1/loads" for ::1 at 2022-01-07 14:55:17 -0500
+Processing by Api::V1::LoadsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "TAYLORWS"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/loads_controller.rb:7:in `authorize'
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 17.2ms | Allocations: 5254)
+
+
+  
+NameError (uninitialized constant Api::V1::LoadsController::Loads):
+  
+app/controllers/api/v1/loads_controller.rb:20:in `index'
+Started GET "/api/v1/loads" for ::1 at 2022-01-07 14:56:47 -0500
+Processing by Api::V1::LoadsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "TAYLORWS"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/loads_controller.rb:7:in `authorize'
+  [1m[36mLoad Load (1.7ms)[0m  [1m[34mSELECT "loads".* FROM "loads"[0m
+  ↳ app/controllers/api/v1/loads_controller.rb:21:in `index'
+Completed 200 OK in 32ms (Views: 7.4ms | ActiveRecord: 8.9ms | Allocations: 7187)
+
+
+Started GET "/api/v1/loads" for ::1 at 2022-01-07 14:57:30 -0500
+Processing by Api::V1::LoadsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "TAYLOR"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/loads_controller.rb:7:in `authorize'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 577)
+
+
+Started GET "/api/v1/loads" for ::1 at 2022-01-07 14:57:35 -0500
+Processing by Api::V1::LoadsController#index as */*
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 68)
+
+
+Started GET "/api/v1/loads" for ::1 at 2022-01-07 14:57:39 -0500
+Processing by Api::V1::LoadsController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "TAYLOR"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/loads_controller.rb:7:in `authorize'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 577)
+
+
+Started GET "/api/v1/loads" for ::1 at 2022-01-07 14:57:57 -0500
+Processing by Api::V1::LoadsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "TAYLORWS"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/loads_controller.rb:7:in `authorize'
+  [1m[36mLoad Load (0.4ms)[0m  [1m[34mSELECT "loads".* FROM "loads"[0m
+  ↳ app/controllers/api/v1/loads_controller.rb:21:in `index'
+Completed 200 OK in 5ms (Views: 2.2ms | ActiveRecord: 0.9ms | Allocations: 1506)
+
+
+Started GET "/api/v1/loads" for ::1 at 2022-01-07 14:58:33 -0500
+Processing by Api::V1::LoadsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "TAYLORWS"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/loads_controller.rb:7:in `authorize'
+  [1m[36mLoad Load (0.4ms)[0m  [1m[34mSELECT "loads".* FROM "loads"[0m
+  ↳ app/controllers/api/v1/loads_controller.rb:21:in `index'
+Completed 200 OK in 15ms (Views: 11.5ms | ActiveRecord: 0.8ms | Allocations: 1509)
+
+
+Started GET "/api/v1/loads" for ::1 at 2022-01-07 14:59:05 -0500
+Processing by Api::V1::LoadsController#index as */*
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 159)
+
+
+  
+JWT::DecodeError (Invalid segment encoding):
+  
+app/controllers/api/v1/loads_controller.rb:5:in `authorize'
+app/controllers/api/v1/loads_controller.rb:16:in `index'
+Started GET "/api/v1/loads" for ::1 at 2022-01-07 14:59:12 -0500
+Processing by Api::V1::LoadsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "TAYLORWS"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/loads_controller.rb:7:in `authorize'
+  [1m[36mLoad Load (0.4ms)[0m  [1m[34mSELECT "loads".* FROM "loads"[0m
+  ↳ app/controllers/api/v1/loads_controller.rb:20:in `index'
+Completed 200 OK in 35ms (Views: 6.8ms | ActiveRecord: 8.8ms | Allocations: 7141)
+
+
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 15:10:37 -0500
+  
+ActionController::RoutingError (uninitialized constant Api::V1::MessagesController
+Did you mean?  Api::V1::MessagesContoller):
+  
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 15:13:13 -0500
+  
+ActionController::RoutingError (uninitialized constant Api::V1::MessagesController
+Did you mean?  Api::V1::MessagesContoller):
+  
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 15:17:52 -0500
+Processing by Api::V1::MessagesController#new as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "composed_at"=>"2018-01-16T16:34:12+00:00", "read_at"=>"2018-01-16T16:34:24+00:00", "message_type"=>"text", "body"=>"Got any loads?", "handle"=>"yoyoyo", "message"=>{"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "body"=>"Got any loads?", "composed_at"=>"2018-01-16T16:34:12+00:00"}}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 15.7ms | Allocations: 1120)
+
+
+  
+NoMethodError (undefined method `direction' for #<StringIO:0x00000207075907a8>):
+  
+app/controllers/api/v1/messages_controller.rb:10:in `new'
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 15:18:16 -0500
+  
+SyntaxError (C:/RubyWebService/eleos-web-service-ruby/app/controllers/api/v1/messages_controller.rb:10: syntax error, unexpected ':', expecting =>
+          :direction :request.body.direction,
+                     ^
+C:/RubyWebService/eleos-web-service-ruby/app/controllers/api/v1/messages_controller.rb:11: syntax error, unexpected tLABEL, expecting '='
+          username: request.body.username,
+          ^~~~~~~~~
+C:/RubyWebService/eleos-web-service-ruby/app/controllers/api/v1/messages_controller.rb:12: syntax error, unexpected tLABEL, expecting '='
+          message_type: request.body.message_type,
+          ^~~~~~~~~~~~~
+C:/RubyWebService/eleos-web-service-ruby/app/controllers/api/v1/messages_controller.rb:13: syntax error, unexpected tLABEL, expecting '='
+          composed_at: request.body.composed_at,
+          ^~~~~~~~~~~~
+C:/RubyWebService/eleos-web-service-ruby/app/controllers/api/v1/messages_controller.rb:14: syntax error, unexpected tLABEL, expecting '='
+          platform_received_at: request.body.platform_receiv...
+          ^~~~~~~~~~~~~~~~~~~~~
+C:/RubyWebService/eleos-web-service-ruby/app/controllers/api/v1/messages_controller.rb:15: syntax error, unexpected tLABEL, expecting '='
+          body: request.body.body
+          ^~~~~
+C:/RubyWebService/eleos-web-service-ruby/app/controllers/api/v1/messages_controller.rb:16: syntax error, unexpected '}', expecting `end'
+        })
+        ^
+):
+  
+app/controllers/api/v1/messages_controller.rb:10: syntax error, unexpected ':', expecting =>
+app/controllers/api/v1/messages_controller.rb:11: syntax error, unexpected tLABEL, expecting '='
+app/controllers/api/v1/messages_controller.rb:12: syntax error, unexpected tLABEL, expecting '='
+app/controllers/api/v1/messages_controller.rb:13: syntax error, unexpected tLABEL, expecting '='
+app/controllers/api/v1/messages_controller.rb:14: syntax error, unexpected tLABEL, expecting '='
+app/controllers/api/v1/messages_controller.rb:15: syntax error, unexpected tLABEL, expecting '='
+app/controllers/api/v1/messages_controller.rb:16: syntax error, unexpected '}', expecting `end'
+app/controllers/api/v1/messages_controller.rb:10: syntax error, unexpected ':', expecting =>
+app/controllers/api/v1/messages_controller.rb:11: syntax error, unexpected tLABEL, expecting '='
+app/controllers/api/v1/messages_controller.rb:12: syntax error, unexpected tLABEL, expecting '='
+app/controllers/api/v1/messages_controller.rb:13: syntax error, unexpected tLABEL, expecting '='
+app/controllers/api/v1/messages_controller.rb:14: syntax error, unexpected tLABEL, expecting '='
+app/controllers/api/v1/messages_controller.rb:15: syntax error, unexpected tLABEL, expecting '='
+app/controllers/api/v1/messages_controller.rb:16: syntax error, unexpected '}', expecting `end'
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 15:18:40 -0500
+  
+SyntaxError (C:/RubyWebService/eleos-web-service-ruby/app/controllers/api/v1/messages_controller.rb:10: syntax error, unexpected '=', expecting =>
+          :direction = request.body.direction,
+                     ^
+C:/RubyWebService/eleos-web-service-ruby/app/controllers/api/v1/messages_controller.rb:11: syntax error, unexpected tLABEL, expecting '='
+          username: request.body.username,
+          ^~~~~~~~~
+C:/RubyWebService/eleos-web-service-ruby/app/controllers/api/v1/messages_controller.rb:12: syntax error, unexpected tLABEL, expecting '='
+          message_type: request.body.message_type,
+          ^~~~~~~~~~~~~
+C:/RubyWebService/eleos-web-service-ruby/app/controllers/api/v1/messages_controller.rb:13: syntax error, unexpected tLABEL, expecting '='
+          composed_at: request.body.composed_at,
+          ^~~~~~~~~~~~
+C:/RubyWebService/eleos-web-service-ruby/app/controllers/api/v1/messages_controller.rb:14: syntax error, unexpected tLABEL, expecting '='
+          platform_received_at: request.body.platform_receiv...
+          ^~~~~~~~~~~~~~~~~~~~~
+C:/RubyWebService/eleos-web-service-ruby/app/controllers/api/v1/messages_controller.rb:15: syntax error, unexpected tLABEL, expecting '='
+          body: request.body.body
+          ^~~~~
+C:/RubyWebService/eleos-web-service-ruby/app/controllers/api/v1/messages_controller.rb:16: syntax error, unexpected '}', expecting `end'
+        })
+        ^
+):
+  
+app/controllers/api/v1/messages_controller.rb:10: syntax error, unexpected '=', expecting =>
+app/controllers/api/v1/messages_controller.rb:11: syntax error, unexpected tLABEL, expecting '='
+app/controllers/api/v1/messages_controller.rb:12: syntax error, unexpected tLABEL, expecting '='
+app/controllers/api/v1/messages_controller.rb:13: syntax error, unexpected tLABEL, expecting '='
+app/controllers/api/v1/messages_controller.rb:14: syntax error, unexpected tLABEL, expecting '='
+app/controllers/api/v1/messages_controller.rb:15: syntax error, unexpected tLABEL, expecting '='
+app/controllers/api/v1/messages_controller.rb:16: syntax error, unexpected '}', expecting `end'
+app/controllers/api/v1/messages_controller.rb:10: syntax error, unexpected '=', expecting =>
+app/controllers/api/v1/messages_controller.rb:11: syntax error, unexpected tLABEL, expecting '='
+app/controllers/api/v1/messages_controller.rb:12: syntax error, unexpected tLABEL, expecting '='
+app/controllers/api/v1/messages_controller.rb:13: syntax error, unexpected tLABEL, expecting '='
+app/controllers/api/v1/messages_controller.rb:14: syntax error, unexpected tLABEL, expecting '='
+app/controllers/api/v1/messages_controller.rb:15: syntax error, unexpected tLABEL, expecting '='
+app/controllers/api/v1/messages_controller.rb:16: syntax error, unexpected '}', expecting `end'
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 15:22:34 -0500
+  
+SyntaxError (C:/RubyWebService/eleos-web-service-ruby/app/controllers/api/v1/messages_controller.rb:10: syntax error, unexpected symbol literal, expecting =>
+...       request.body.direction :direction,
+...                              ^
+C:/RubyWebService/eleos-web-service-ruby/app/controllers/api/v1/messages_controller.rb:12: syntax error, unexpected tLABEL, expecting '='
+          message_type: request.body.message_type,
+          ^~~~~~~~~~~~~
+C:/RubyWebService/eleos-web-service-ruby/app/controllers/api/v1/messages_controller.rb:13: syntax error, unexpected tLABEL, expecting '='
+          composed_at: request.body.composed_at,
+          ^~~~~~~~~~~~
+C:/RubyWebService/eleos-web-service-ruby/app/controllers/api/v1/messages_controller.rb:14: syntax error, unexpected tLABEL, expecting '='
+          platform_received_at: request.body.platform_receiv...
+          ^~~~~~~~~~~~~~~~~~~~~
+C:/RubyWebService/eleos-web-service-ruby/app/controllers/api/v1/messages_controller.rb:15: syntax error, unexpected tLABEL, expecting '='
+          body: request.body.body
+          ^~~~~
+C:/RubyWebService/eleos-web-service-ruby/app/controllers/api/v1/messages_controller.rb:16: syntax error, unexpected '}', expecting `end'
+        })
+        ^
+):
+  
+app/controllers/api/v1/messages_controller.rb:10: syntax error, unexpected symbol literal, expecting =>
+app/controllers/api/v1/messages_controller.rb:12: syntax error, unexpected tLABEL, expecting '='
+app/controllers/api/v1/messages_controller.rb:13: syntax error, unexpected tLABEL, expecting '='
+app/controllers/api/v1/messages_controller.rb:14: syntax error, unexpected tLABEL, expecting '='
+app/controllers/api/v1/messages_controller.rb:15: syntax error, unexpected tLABEL, expecting '='
+app/controllers/api/v1/messages_controller.rb:16: syntax error, unexpected '}', expecting `end'
+app/controllers/api/v1/messages_controller.rb:10: syntax error, unexpected symbol literal, expecting =>
+app/controllers/api/v1/messages_controller.rb:12: syntax error, unexpected tLABEL, expecting '='
+app/controllers/api/v1/messages_controller.rb:13: syntax error, unexpected tLABEL, expecting '='
+app/controllers/api/v1/messages_controller.rb:14: syntax error, unexpected tLABEL, expecting '='
+app/controllers/api/v1/messages_controller.rb:15: syntax error, unexpected tLABEL, expecting '='
+app/controllers/api/v1/messages_controller.rb:16: syntax error, unexpected '}', expecting `end'
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 15:23:00 -0500
+  
+SyntaxError (C:/RubyWebService/eleos-web-service-ruby/app/controllers/api/v1/messages_controller.rb:10: syntax error, unexpected symbol literal, expecting =>
+...       request.body.direction :direction,
+...                              ^
+C:/RubyWebService/eleos-web-service-ruby/app/controllers/api/v1/messages_controller.rb:12: syntax error, unexpected tLABEL, expecting '='
+          message_type: request.body.message_type,
+          ^~~~~~~~~~~~~
+C:/RubyWebService/eleos-web-service-ruby/app/controllers/api/v1/messages_controller.rb:13: syntax error, unexpected tLABEL, expecting '='
+          composed_at: request.body.composed_at,
+          ^~~~~~~~~~~~
+C:/RubyWebService/eleos-web-service-ruby/app/controllers/api/v1/messages_controller.rb:14: syntax error, unexpected tLABEL, expecting '='
+          platform_received_at: request.body.platform_receiv...
+          ^~~~~~~~~~~~~~~~~~~~~
+C:/RubyWebService/eleos-web-service-ruby/app/controllers/api/v1/messages_controller.rb:15: syntax error, unexpected tLABEL, expecting '='
+          body: request.body.body
+          ^~~~~
+C:/RubyWebService/eleos-web-service-ruby/app/controllers/api/v1/messages_controller.rb:16: syntax error, unexpected '}', expecting `end'
+        })
+        ^
+):
+  
+app/controllers/api/v1/messages_controller.rb:10: syntax error, unexpected symbol literal, expecting =>
+app/controllers/api/v1/messages_controller.rb:12: syntax error, unexpected tLABEL, expecting '='
+app/controllers/api/v1/messages_controller.rb:13: syntax error, unexpected tLABEL, expecting '='
+app/controllers/api/v1/messages_controller.rb:14: syntax error, unexpected tLABEL, expecting '='
+app/controllers/api/v1/messages_controller.rb:15: syntax error, unexpected tLABEL, expecting '='
+app/controllers/api/v1/messages_controller.rb:16: syntax error, unexpected '}', expecting `end'
+app/controllers/api/v1/messages_controller.rb:10: syntax error, unexpected symbol literal, expecting =>
+app/controllers/api/v1/messages_controller.rb:12: syntax error, unexpected tLABEL, expecting '='
+app/controllers/api/v1/messages_controller.rb:13: syntax error, unexpected tLABEL, expecting '='
+app/controllers/api/v1/messages_controller.rb:14: syntax error, unexpected tLABEL, expecting '='
+app/controllers/api/v1/messages_controller.rb:15: syntax error, unexpected tLABEL, expecting '='
+app/controllers/api/v1/messages_controller.rb:16: syntax error, unexpected '}', expecting `end'
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 15:23:06 -0500
+  
+SyntaxError (C:/RubyWebService/eleos-web-service-ruby/app/controllers/api/v1/messages_controller.rb:10: syntax error, unexpected symbol literal, expecting =>
+...       request.body.direction :direction
+...                              ^
+C:/RubyWebService/eleos-web-service-ruby/app/controllers/api/v1/messages_controller.rb:11: syntax error, unexpected '}', expecting `end'
+        })
+        ^
+):
+  
+app/controllers/api/v1/messages_controller.rb:10: syntax error, unexpected symbol literal, expecting =>
+app/controllers/api/v1/messages_controller.rb:11: syntax error, unexpected '}', expecting `end'
+app/controllers/api/v1/messages_controller.rb:10: syntax error, unexpected symbol literal, expecting =>
+app/controllers/api/v1/messages_controller.rb:11: syntax error, unexpected '}', expecting `end'
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 15:24:15 -0500
+Processing by Api::V1::MessagesController#new as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "composed_at"=>"2018-01-16T16:34:12+00:00", "read_at"=>"2018-01-16T16:34:24+00:00", "message_type"=>"text", "body"=>"Got any loads?", "handle"=>"yoyoyo", "message"=>{"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "body"=>"Got any loads?", "composed_at"=>"2018-01-16T16:34:12+00:00"}}
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 3.8ms | Allocations: 172)
+
+
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 15:24:30 -0500
+Processing by Api::V1::MessagesController#new as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "composed_at"=>"2018-01-16T16:34:12+00:00", "read_at"=>"2018-01-16T16:34:24+00:00", "message_type"=>"text", "body"=>"Got any loads?", "handle"=>"yoyoyo", "message"=>{"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "body"=>"Got any loads?", "composed_at"=>"2018-01-16T16:34:12+00:00"}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 3.4ms | Allocations: 1120)
+
+
+  
+NoMethodError (undefined method `direction' for #<StringIO:0x00000207059d5428>):
+  
+app/controllers/api/v1/messages_controller.rb:9:in `new'
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 15:24:47 -0500
+Processing by Api::V1::MessagesController#new as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "composed_at"=>"2018-01-16T16:34:12+00:00", "read_at"=>"2018-01-16T16:34:24+00:00", "message_type"=>"text", "body"=>"Got any loads?", "handle"=>"yoyoyo", "message"=>{"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "body"=>"Got any loads?", "composed_at"=>"2018-01-16T16:34:12+00:00"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 2.2ms | Allocations: 1115)
+
+
+  
+NoMethodError (undefined method `[]' for #<StringIO:0x0000020707e8cd20>):
+  
+app/controllers/api/v1/messages_controller.rb:9:in `new'
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 15:25:23 -0500
+Processing by Api::V1::MessagesController#new as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "composed_at"=>"2018-01-16T16:34:12+00:00", "read_at"=>"2018-01-16T16:34:24+00:00", "message_type"=>"text", "body"=>"Got any loads?", "handle"=>"yoyoyo", "message"=>{"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "body"=>"Got any loads?", "composed_at"=>"2018-01-16T16:34:12+00:00"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 2.4ms | Allocations: 1113)
+
+
+  
+NoMethodError (undefined method `[]' for #<StringIO:0x00000207072aa4d0>):
+  
+app/controllers/api/v1/messages_controller.rb:9:in `new'
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 15:25:35 -0500
+Processing by Api::V1::MessagesController#new as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "composed_at"=>"2018-01-16T16:34:12+00:00", "read_at"=>"2018-01-16T16:34:24+00:00", "message_type"=>"text", "body"=>"Got any loads?", "handle"=>"yoyoyo", "message"=>{"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "body"=>"Got any loads?", "composed_at"=>"2018-01-16T16:34:12+00:00"}}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 2.2ms | Allocations: 170)
+
+
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 17:28:56 -0500
+Processing by Api::V1::MessagesController#new as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "composed_at"=>"2018-01-16T16:34:12+00:00", "read_at"=>"2018-01-16T16:34:24+00:00", "message_type"=>"text", "body"=>"Got any loads?", "handle"=>"yoyoyo", "message"=>{"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "body"=>"Got any loads?", "composed_at"=>"2018-01-16T16:34:12+00:00"}}
+Completed 200 OK in 0ms (Views: 0.2ms | Allocations: 150)
+
+
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 17:29:06 -0500
+Processing by Api::V1::MessagesController#new as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "composed_at"=>"2018-01-16T16:34:12+00:00", "read_at"=>"2018-01-16T16:34:24+00:00", "message_type"=>"text", "body"=>"Got any fish?", "handle"=>"yoyoyo", "message"=>{"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "body"=>"Got any fish?", "composed_at"=>"2018-01-16T16:34:12+00:00"}}
+Completed 200 OK in 1ms (Views: 0.4ms | Allocations: 150)
+
+
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 17:30:12 -0500
+Processing by Api::V1::MessagesController#new as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "composed_at"=>"2018-01-16T16:34:12+00:00", "read_at"=>"2018-01-16T16:34:24+00:00", "message_type"=>"text", "body"=>"Got any fish?", "handle"=>"yoyoyo", "message"=>{"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "body"=>"Got any fish?", "composed_at"=>"2018-01-16T16:34:12+00:00"}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 12.5ms | Allocations: 1114)
+
+
+  
+NoMethodError (undefined method `save' for #<StringIO:0x000002070544b250>):
+  
+app/controllers/api/v1/messages_controller.rb:10:in `new'
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 17:35:21 -0500
+  
+SyntaxError (C:/RubyWebService/eleos-web-service-ruby/app/controllers/api/v1/messages_controller.rb:11: syntax error, unexpected ':', expecting `end'
+          render: message
+                ^
+):
+  
+app/controllers/api/v1/messages_controller.rb:11: syntax error, unexpected ':', expecting `end'
+app/controllers/api/v1/messages_controller.rb:11: syntax error, unexpected ':', expecting `end'
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 17:35:35 -0500
+Processing by Api::V1::MessagesController#new as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "composed_at"=>"2018-01-16T16:34:12+00:00", "read_at"=>"2018-01-16T16:34:24+00:00", "message_type"=>"text", "body"=>"Got any fish?", "handle"=>"yoyoyo", "message"=>{"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "body"=>"Got any fish?", "composed_at"=>"2018-01-16T16:34:12+00:00"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 8.8ms | Allocations: 87)
+
+
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 17:36:15 -0500
+Processing by Api::V1::MessagesController#new as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "composed_at"=>"2018-01-16T16:34:12+00:00", "read_at"=>"2018-01-16T16:34:24+00:00", "message_type"=>"text", "body"=>"Got any fish?", "handle"=>"yoyoyo", "message"=>{"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "body"=>"Got any fish?", "composed_at"=>"2018-01-16T16:34:12+00:00"}}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 4.9ms | Allocations: 1118)
+
+
+  
+NoMethodError (undefined method `username' for #<StringIO:0x000002070699caa0>):
+  
+app/controllers/api/v1/messages_controller.rb:11:in `new'
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 17:36:58 -0500
+Processing by Api::V1::MessagesController#new as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "composed_at"=>"2018-01-16T16:34:12+00:00", "read_at"=>"2018-01-16T16:34:24+00:00", "message_type"=>"text", "body"=>"Got any fish?", "handle"=>"yoyoyo", "message"=>{"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "body"=>"Got any fish?", "composed_at"=>"2018-01-16T16:34:12+00:00"}}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 3.8ms | Allocations: 1114)
+
+
+  
+NoMethodError (undefined method `[]' for #<StringIO:0x000002070346c510>):
+  
+app/controllers/api/v1/messages_controller.rb:11:in `new'
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 17:37:16 -0500
+Processing by Api::V1::MessagesController#new as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "composed_at"=>"2018-01-16T16:34:12+00:00", "read_at"=>"2018-01-16T16:34:24+00:00", "message_type"=>"text", "body"=>"Got any fish?", "handle"=>"yoyoyo", "message"=>{"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "body"=>"Got any fish?", "composed_at"=>"2018-01-16T16:34:12+00:00"}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 2.5ms | Allocations: 112)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/api/v1/messages_controller.rb:11:in `[]'
+app/controllers/api/v1/messages_controller.rb:11:in `new'
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 17:37:28 -0500
+Processing by Api::V1::MessagesController#new as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "composed_at"=>"2018-01-16T16:34:12+00:00", "read_at"=>"2018-01-16T16:34:24+00:00", "message_type"=>"text", "body"=>"Got any fish?", "handle"=>"yoyoyo", "message"=>{"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "body"=>"Got any fish?", "composed_at"=>"2018-01-16T16:34:12+00:00"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 4.5ms | Allocations: 87)
+
+
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 17:38:21 -0500
+Processing by Api::V1::MessagesController#new as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "composed_at"=>"2018-01-16T16:34:12+00:00", "read_at"=>"2018-01-16T16:34:24+00:00", "message_type"=>"text", "body"=>"Got any fish?", "handle"=>"yoyoyo", "message"=>{"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "body"=>"Got any fish?", "composed_at"=>"2018-01-16T16:34:12+00:00"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 2.2ms | Allocations: 89)
+
+
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 17:38:30 -0500
+Processing by Api::V1::MessagesController#new as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "composed_at"=>"2018-01-16T16:34:12+00:00", "read_at"=>"2018-01-16T16:34:24+00:00", "message_type"=>"text", "body"=>"Got any fish?", "handle"=>"yoyoyo", "message"=>{"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "body"=>"Got any fish?", "composed_at"=>"2018-01-16T16:34:12+00:00"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 4.6ms | Allocations: 87)
+
+
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 17:38:41 -0500
+Processing by Api::V1::MessagesController#new as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "composed_at"=>"2018-01-16T16:34:12+00:00", "read_at"=>"2018-01-16T16:34:24+00:00", "message_type"=>"text", "body"=>"Got any fish?", "handle"=>"yoyoyo", "message"=>{"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "body"=>"Got any fish?", "composed_at"=>"2018-01-16T16:34:12+00:00"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 2.4ms | Allocations: 100)
+
+
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 17:38:54 -0500
+Processing by Api::V1::MessagesController#new as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "composed_at"=>"2018-01-16T16:34:12+00:00", "read_at"=>"2018-01-16T16:34:24+00:00", "message_type"=>"text", "body"=>"Got any fish?", "handle"=>"yoyoyo", "message"=>{"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "body"=>"Got any fish?", "composed_at"=>"2018-01-16T16:34:12+00:00"}}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 2.3ms | Allocations: 1282)
+
+
+  
+NoMethodError (undefined method `username' for #<String:0x0000020707004758>):
+  
+app/controllers/api/v1/messages_controller.rb:11:in `new'
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 17:39:04 -0500
+Processing by Api::V1::MessagesController#new as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "composed_at"=>"2018-01-16T16:34:12+00:00", "read_at"=>"2018-01-16T16:34:24+00:00", "message_type"=>"text", "body"=>"Got any fish?", "handle"=>"yoyoyo", "message"=>{"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "body"=>"Got any fish?", "composed_at"=>"2018-01-16T16:34:12+00:00"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 2.8ms | Allocations: 100)
+
+
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 17:39:45 -0500
+Processing by Api::V1::MessagesController#new as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "composed_at"=>"2018-01-16T16:34:12+00:00", "read_at"=>"2018-01-16T16:34:24+00:00", "message_type"=>"text", "body"=>"Got any fish?", "handle"=>"yoyoyo", "message"=>{"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "body"=>"Got any fish?", "composed_at"=>"2018-01-16T16:34:12+00:00"}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 2.9ms | Allocations: 111)
+
+
+  
+TypeError (no implicit conversion of Symbol into Integer):
+  
+app/controllers/api/v1/messages_controller.rb:11:in `[]'
+app/controllers/api/v1/messages_controller.rb:11:in `new'
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 17:40:04 -0500
+Processing by Api::V1::MessagesController#new as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "composed_at"=>"2018-01-16T16:34:12+00:00", "read_at"=>"2018-01-16T16:34:24+00:00", "message_type"=>"text", "body"=>"Got any fish?", "handle"=>"yoyoyo", "message"=>{"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "body"=>"Got any fish?", "composed_at"=>"2018-01-16T16:34:12+00:00"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 5.3ms | Allocations: 107)
+
+
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 17:40:15 -0500
+Processing by Api::V1::MessagesController#new as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "composed_at"=>"2018-01-16T16:34:12+00:00", "read_at"=>"2018-01-16T16:34:24+00:00", "message_type"=>"text", "body"=>"Got any fish?", "handle"=>"yoyoyo", "message"=>{"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "body"=>"Got any fish?", "composed_at"=>"2018-01-16T16:34:12+00:00"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 3.7ms | Allocations: 102)
+
+
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 17:40:27 -0500
+Processing by Api::V1::MessagesController#new as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "composed_at"=>"2018-01-16T16:34:12+00:00", "read_at"=>"2018-01-16T16:34:24+00:00", "message_type"=>"text", "body"=>"Got any fish?", "handle"=>"yoyoyo", "message"=>{"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "body"=>"Got any fish?", "composed_at"=>"2018-01-16T16:34:12+00:00"}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 2.6ms | Allocations: 111)
+
+
+  
+TypeError (no implicit conversion of Symbol into Integer):
+  
+app/controllers/api/v1/messages_controller.rb:11:in `[]'
+app/controllers/api/v1/messages_controller.rb:11:in `new'
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 17:40:38 -0500
+Processing by Api::V1::MessagesController#new as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "composed_at"=>"2018-01-16T16:34:12+00:00", "read_at"=>"2018-01-16T16:34:24+00:00", "message_type"=>"text", "body"=>"Got any fish?", "handle"=>"yoyoyo", "message"=>{"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "body"=>"Got any fish?", "composed_at"=>"2018-01-16T16:34:12+00:00"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 2.3ms | Allocations: 102)
+
+
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 17:42:02 -0500
+Processing by Api::V1::MessagesController#new as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "composed_at"=>"2018-01-16T16:34:12+00:00", "read_at"=>"2018-01-16T16:34:24+00:00", "message_type"=>"text", "body"=>"Got any fish?", "handle"=>"yoyoyo", "message"=>{"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "body"=>"Got any fish?", "composed_at"=>"2018-01-16T16:34:12+00:00"}}
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 11.2ms | Allocations: 4011)
+
+
+  
+ArgumentError (When assigning attributes, you must pass a hash as an argument, String passed.):
+  
+app/controllers/api/v1/messages_controller.rb:9:in `new'
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 17:42:42 -0500
+Processing by Api::V1::MessagesController#new as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "composed_at"=>"2018-01-16T16:34:12+00:00", "read_at"=>"2018-01-16T16:34:24+00:00", "message_type"=>"text", "body"=>"Got any fish?", "handle"=>"yoyoyo", "message"=>{"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "body"=>"Got any fish?", "composed_at"=>"2018-01-16T16:34:12+00:00"}}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 4.8ms | Allocations: 1491)
+
+
+  
+ArgumentError (When assigning attributes, you must pass a hash as an argument, String passed.):
+  
+app/controllers/api/v1/messages_controller.rb:10:in `new'
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 17:44:36 -0500
+Processing by Api::V1::MessagesController#new as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "composed_at"=>"2018-01-16T16:34:12+00:00", "read_at"=>"2018-01-16T16:34:24+00:00", "message_type"=>"text", "body"=>"Got any fish?", "handle"=>"yoyoyo", "message"=>{"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "body"=>"Got any fish?", "composed_at"=>"2018-01-16T16:34:12+00:00"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 2.4ms | Allocations: 89)
+
+
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 17:45:53 -0500
+Processing by Api::V1::MessagesController#new as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "composed_at"=>"2018-01-16T16:34:12+00:00", "read_at"=>"2018-01-16T16:34:24+00:00", "message_type"=>"text", "body"=>"Got any fish?", "handle"=>"yoyoyo", "message"=>{"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "body"=>"Got any fish?", "composed_at"=>"2018-01-16T16:34:12+00:00"}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 4.2ms | Allocations: 1411)
+
+
+  
+NoMethodError (undefined method `each' for #<String:0x0000020706ddb710>):
+  
+app/controllers/api/v1/messages_controller.rb:13:in `new'
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 17:50:07 -0500
+Processing by Api::V1::MessagesController#new as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "composed_at"=>"2018-01-16T16:34:12+00:00", "read_at"=>"2018-01-16T16:34:24+00:00", "message_type"=>"text", "body"=>"Got any fish?", "handle"=>"yoyoyo", "message"=>{"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "body"=>"Got any fish?", "composed_at"=>"2018-01-16T16:34:12+00:00"}}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 2.5ms | Allocations: 1411)
+
+
+  
+NoMethodError (undefined method `each' for #<String:0x0000020707e1c188>):
+  
+app/controllers/api/v1/messages_controller.rb:11:in `new'
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 17:50:52 -0500
+Processing by Api::V1::MessagesController#new as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "composed_at"=>"2018-01-16T16:34:12+00:00", "read_at"=>"2018-01-16T16:34:24+00:00", "message_type"=>"text", "body"=>"Got any fish?", "handle"=>"yoyoyo", "message"=>{"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "body"=>"Got any fish?", "composed_at"=>"2018-01-16T16:34:12+00:00"}}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 4.0ms | Allocations: 1606)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'data' for Message.):
+  
+app/controllers/api/v1/messages_controller.rb:11:in `block in new'
+app/controllers/api/v1/messages_controller.rb:11:in `each'
+app/controllers/api/v1/messages_controller.rb:11:in `new'
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 17:51:06 -0500
+Processing by Api::V1::MessagesController#new as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "composed_at"=>"2018-01-16T16:34:12+00:00", "read_at"=>"2018-01-16T16:34:24+00:00", "message_type"=>"text", "body"=>"Got any fish?", "handle"=>"yoyoyo", "message"=>{"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "body"=>"Got any fish?", "composed_at"=>"2018-01-16T16:34:12+00:00"}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 153)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'data' for Message.):
+  
+app/controllers/api/v1/messages_controller.rb:11:in `block in new'
+app/controllers/api/v1/messages_controller.rb:11:in `each'
+app/controllers/api/v1/messages_controller.rb:11:in `new'
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 17:51:13 -0500
+Processing by Api::V1::MessagesController#new as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "composed_at"=>"2018-01-16T16:34:12+00:00", "read_at"=>"2018-01-16T16:34:24+00:00", "message_type"=>"text", "body"=>"Got any fish?", "handle"=>"yoyoyo", "message"=>{"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "body"=>"Got any fish?", "composed_at"=>"2018-01-16T16:34:12+00:00"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 3.7ms | Allocations: 106)
+
+
+  
+TypeError (no implicit conversion of Array into String):
+  
+rack (2.2.3) lib/rack/etag.rb:69:in `<<'
+rack (2.2.3) lib/rack/etag.rb:69:in `block in digest_body'
+actionpack (7.0.0) lib/action_dispatch/http/response.rb:146:in `each'
+actionpack (7.0.0) lib/action_dispatch/http/response.rb:146:in `each_chunk'
+actionpack (7.0.0) lib/action_dispatch/http/response.rb:128:in `each'
+actionpack (7.0.0) lib/action_dispatch/http/response.rb:76:in `each'
+actionpack (7.0.0) lib/action_dispatch/http/response.rb:481:in `each'
+rack (2.2.3) lib/rack/etag.rb:67:in `digest_body'
+rack (2.2.3) lib/rack/etag.rb:31:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (7.0.0) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.0) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.0) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.0) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.0) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.0) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.0) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.0) lib/rails/engine.rb:530:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 17:51:51 -0500
+Processing by Api::V1::MessagesController#new as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "composed_at"=>"2018-01-16T16:34:12+00:00", "read_at"=>"2018-01-16T16:34:24+00:00", "message_type"=>"text", "body"=>"Got any fish?", "handle"=>"yoyoyo", "message"=>{"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "body"=>"Got any fish?", "composed_at"=>"2018-01-16T16:34:12+00:00"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 6.6ms | Allocations: 89)
+
+
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 17:52:24 -0500
+Processing by Api::V1::MessagesController#new as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "composed_at"=>"2018-01-16T16:34:12+00:00", "read_at"=>"2018-01-16T16:34:24+00:00", "message_type"=>"text", "body"=>"Got any fish?", "handle"=>"yoyoyo", "message"=>{"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "body"=>"Got any fish?", "composed_at"=>"2018-01-16T16:34:12+00:00"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 3.0ms | Allocations: 90)
+
+
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 17:52:34 -0500
+Processing by Api::V1::MessagesController#new as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "composed_at"=>"2018-01-16T16:34:12+00:00", "read_at"=>"2018-01-16T16:34:24+00:00", "message_type"=>"text", "body"=>"Got any fish?", "handle"=>"yoyoyo", "message"=>{"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "body"=>"Got any fish?", "composed_at"=>"2018-01-16T16:34:12+00:00"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 2.1ms | Allocations: 90)
+
+
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 17:52:44 -0500
+Processing by Api::V1::MessagesController#new as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "composed_at"=>"2018-01-16T16:34:12+00:00", "read_at"=>"2018-01-16T16:34:24+00:00", "message_type"=>"text", "body"=>"Got any fish?", "handle"=>"yoyoyo", "message"=>{"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "body"=>"Got any fish?", "composed_at"=>"2018-01-16T16:34:12+00:00"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 70)
+
+
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 17:52:53 -0500
+Processing by Api::V1::MessagesController#new as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "composed_at"=>"2018-01-16T16:34:12+00:00", "read_at"=>"2018-01-16T16:34:24+00:00", "message_type"=>"text", "body"=>"Got any fish?", "handle"=>"yoyoyo", "message"=>{"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "body"=>"Got any fish?", "composed_at"=>"2018-01-16T16:34:12+00:00"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 2.3ms | Allocations: 89)
+
+
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 18:04:41 -0500
+Processing by Api::V1::MessagesController#new as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "composed_at"=>"2018-01-16T16:34:12+00:00", "read_at"=>"2018-01-16T16:34:24+00:00", "message_type"=>"text", "body"=>"Got any fish?", "handle"=>"yoyoyo", "message"=>{"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "body"=>"Got any fish?", "composed_at"=>"2018-01-16T16:34:12+00:00"}}
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 13.5ms | Allocations: 1940)
+
+
+  
+NameError (undefined local variable or method `message_params' for #<Api::V1::MessagesController:0x00000000152278>):
+  
+app/controllers/api/v1/messages_controller.rb:9:in `new'
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 18:05:46 -0500
+Processing by Api::V1::MessagesController#new as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "composed_at"=>"2018-01-16T16:34:12+00:00", "read_at"=>"2018-01-16T16:34:24+00:00", "message_type"=>"text", "body"=>"Got any fish?", "handle"=>"yoyoyo", "message"=>{"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "body"=>"Got any fish?", "composed_at"=>"2018-01-16T16:34:12+00:00"}}
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 14.8ms | Allocations: 5348)
+
+
+  
+NoMethodError (undefined method `platform_recieved_at' for #<Message:0x0000020706c8ee70>
+Did you mean?  platform_received_at
+               platform_received_at=
+               platform_received_at?):
+  
+app/controllers/api/v1/messages_controller.rb:11:in `new'
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 18:06:17 -0500
+Processing by Api::V1::MessagesController#new as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "composed_at"=>"2018-01-16T16:34:12+00:00", "read_at"=>"2018-01-16T16:34:24+00:00", "message_type"=>"text", "body"=>"Got any fish?", "handle"=>"yoyoyo", "message"=>{"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "body"=>"Got any fish?", "composed_at"=>"2018-01-16T16:34:12+00:00"}}
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 6.2ms | Allocations: 5291)
+
+
+  
+NoMethodError (undefined method `platform_recieved_at' for #<Message:0x0000020707dcd0b0>
+Did you mean?  platform_received_at
+               platform_received_at=
+               platform_received_at?):
+  
+app/controllers/api/v1/messages_controller.rb:11:in `new'
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 18:07:24 -0500
+Processing by Api::V1::MessagesController#new as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "composed_at"=>"2018-01-16T16:34:12+00:00", "platform_recieved_at"=>"2018-01-16T16:34:12+00:00", "read_at"=>"2018-01-16T16:34:24+00:00", "message_type"=>"text", "body"=>"Got any fish?", "handle"=>"yoyoyo", "message"=>{"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "body"=>"Got any fish?", "composed_at"=>"2018-01-16T16:34:12+00:00"}}
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.0ms | Allocations: 3771)
+
+
+  
+NoMethodError (undefined method `platform_recieved_at' for #<Message:0x00000207072a8a90>
+Did you mean?  platform_received_at
+               platform_received_at=
+               platform_received_at?):
+  
+app/controllers/api/v1/messages_controller.rb:11:in `new'
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 18:07:39 -0500
+Processing by Api::V1::MessagesController#new as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "composed_at"=>"2018-01-16T16:34:12+00:00", "platform_recieved_at"=>"2018-01-16T16:34:12+00:00", "read_at"=>"2018-01-16T16:34:24+00:00", "message_type"=>"text", "body"=>"Got any fish?", "handle"=>"yoyoyo", "message"=>{"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "body"=>"Got any fish?", "composed_at"=>"2018-01-16T16:34:12+00:00"}}
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.0ms | Allocations: 3769)
+
+
+  
+NoMethodError (undefined method `platform_recieved_at' for #<Message:0x0000020706d0a6d8>
+Did you mean?  platform_received_at
+               platform_received_at=
+               platform_received_at?):
+  
+app/controllers/api/v1/messages_controller.rb:11:in `new'
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 18:07:55 -0500
+Processing by Api::V1::MessagesController#new as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "composed_at"=>"2018-01-16T16:34:12+00:00", "platform_recieved_at"=>"2018-01-16T16:34:12+00:00", "read_at"=>"2018-01-16T16:34:24+00:00", "message_type"=>"text", "body"=>"Got any fish?", "handle"=>"yoyoyo", "message"=>{"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "body"=>"Got any fish?", "composed_at"=>"2018-01-16T16:34:12+00:00"}}
+Completed 500 Internal Server Error in 102ms (ActiveRecord: 7.3ms | Allocations: 5272)
+
+
+  
+NoMethodError (undefined method `platform_recieved_at' for #<Message:0x00000207039aafe0>
+Did you mean?  platform_received_at
+               platform_received_at=
+               platform_received_at?):
+  
+app/controllers/api/v1/messages_controller.rb:11:in `new'
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 18:09:12 -0500
+  
+NameError (undefined local variable or method `platform_received_at' for #<Class:0x0000020706f85ed0>):
+  
+app/models/message.rb:7:in `<class:Message>'
+app/models/message.rb:1:in `<main>'
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 18:09:37 -0500
+Processing by Api::V1::MessagesController#new as */*
+  Parameters: {"direction"=>"inbound", "username"=>"CHIP", "composed_at"=>"2018-01-16T16:34:12+00:00", "platform_received_at"=>"2018-01-16T16:34:12+00:00", "read_at"=>"2018-01-16T16:34:24+00:00", "message_type"=>"text", "body"=>"Got any fish?", "handle"=>"yoyoyo", "message"=>{"direction"=>"inbound", "username"=>"CHIP", "message_type"=>"text", "body"=>"Got any fish?", "composed_at"=>"2018-01-16T16:34:12+00:00", "platform_received_at"=>"2018-01-16T16:34:12+00:00"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:11:in `new'
+  [1m[36mMessage Create (20.9ms)[0m  [1m[32mINSERT INTO "messages" ("direction", "username", "message_type", "body", "composed_at", "platform_received_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["direction", "inbound"], ["username", "CHIP"], ["message_type", "text"], ["body", "Got any fish?"], ["composed_at", "2018-01-16T16:34:12+00:00"], ["platform_received_at", "2018-01-16T16:34:12+00:00"], ["created_at", "2022-01-07 23:09:38.033686"], ["updated_at", "2022-01-07 23:09:38.033686"]]
+  ↳ app/controllers/api/v1/messages_controller.rb:11:in `new'
+  [1m[36mTRANSACTION (9.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:11:in `new'
+Completed 200 OK in 48ms (Views: 0.2ms | ActiveRecord: 38.4ms | Allocations: 3485)
+
+
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 18:10:26 -0500
+Processing by Api::V1::MessagesController#new as */*
+  Parameters: {"direction"=>"inbound", "username"=>"TAYLORWS", "composed_at"=>"2018-01-16T16:34:12+00:00", "platform_received_at"=>"2018-01-16T16:34:12+00:00", "read_at"=>"2018-01-16T16:34:24+00:00", "body"=>"Got any fish?", "handle"=>"yoyoyo", "message"=>{"direction"=>"inbound", "username"=>"TAYLORWS", "body"=>"Got any fish?", "composed_at"=>"2018-01-16T16:34:12+00:00", "platform_received_at"=>"2018-01-16T16:34:12+00:00"}}
+Completed 422 Unprocessable Entity in 270ms (ActiveRecord: 0.0ms | Allocations: 3195)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Message type can't be blank):
+  
+app/controllers/api/v1/messages_controller.rb:11:in `new'
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 18:10:36 -0500
+Processing by Api::V1::MessagesController#new as */*
+  Parameters: {"direction"=>"inbound", "username"=>"TAYLORWS", "composed_at"=>"2018-01-16T16:34:12+00:00", "platform_received_at"=>"2018-01-16T16:34:12+00:00", "read_at"=>"2018-01-16T16:34:24+00:00", "message_type"=>"text", "body"=>"Got any fish?", "handle"=>"yoyoyo", "message"=>{"direction"=>"inbound", "username"=>"TAYLORWS", "message_type"=>"text", "body"=>"Got any fish?", "composed_at"=>"2018-01-16T16:34:12+00:00", "platform_received_at"=>"2018-01-16T16:34:12+00:00"}}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:11:in `new'
+  [1m[36mMessage Create (0.6ms)[0m  [1m[32mINSERT INTO "messages" ("direction", "username", "message_type", "body", "composed_at", "platform_received_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["direction", "inbound"], ["username", "TAYLORWS"], ["message_type", "text"], ["body", "Got any fish?"], ["composed_at", "2018-01-16T16:34:12+00:00"], ["platform_received_at", "2018-01-16T16:34:12+00:00"], ["created_at", "2022-01-07 23:10:36.502385"], ["updated_at", "2022-01-07 23:10:36.502385"]]
+  ↳ app/controllers/api/v1/messages_controller.rb:11:in `new'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:11:in `new'
+Completed 200 OK in 14ms (Views: 0.2ms | ActiveRecord: 1.6ms | Allocations: 1857)
+
+
+Started PUT "/api/v1/messages/yoyoyo" for ::1 at 2022-01-07 18:11:12 -0500
+Processing by Api::V1::MessagesController#new as */*
+  Parameters: {"direction"=>"inbound", "username"=>"TAYLORWS", "composed_at"=>"2018-01-16T16:34:12+00:00", "platform_received_at"=>"2018-01-16T16:34:12+00:00", "read_at"=>"2018-01-16T16:34:24+00:00", "message_type"=>"text", "body"=>"Got any fish?", "handle"=>"yoyoyo", "message"=>{"direction"=>"inbound", "username"=>"TAYLORWS", "message_type"=>"text", "body"=>"Got any fish?", "composed_at"=>"2018-01-16T16:34:12+00:00", "platform_received_at"=>"2018-01-16T16:34:12+00:00"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 68)
+
+
+Started PUT "/api/v1/messages/yoyoyogag" for ::1 at 2022-01-07 18:11:20 -0500
+Processing by Api::V1::MessagesController#new as */*
+  Parameters: {"direction"=>"inbound", "username"=>"TAYLORWS", "composed_at"=>"2018-01-16T16:34:12+00:00", "platform_received_at"=>"2018-01-16T16:34:12+00:00", "read_at"=>"2018-01-16T16:34:24+00:00", "message_type"=>"text", "body"=>"Got any fish?", "handle"=>"yoyoyogag", "message"=>{"direction"=>"inbound", "username"=>"TAYLORWS", "message_type"=>"text", "body"=>"Got any fish?", "composed_at"=>"2018-01-16T16:34:12+00:00", "platform_received_at"=>"2018-01-16T16:34:12+00:00"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:11:in `new'
+  [1m[36mMessage Create (0.4ms)[0m  [1m[32mINSERT INTO "messages" ("direction", "username", "message_type", "body", "composed_at", "platform_received_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["direction", "inbound"], ["username", "TAYLORWS"], ["message_type", "text"], ["body", "Got any fish?"], ["composed_at", "2018-01-16T16:34:12+00:00"], ["platform_received_at", "2018-01-16T16:34:12+00:00"], ["created_at", "2022-01-07 23:11:20.409830"], ["updated_at", "2022-01-07 23:11:20.409830"]]
+  ↳ app/controllers/api/v1/messages_controller.rb:11:in `new'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:11:in `new'
+Completed 200 OK in 9ms (Views: 0.4ms | ActiveRecord: 0.9ms | Allocations: 1857)
+
+
+Started GET "/" for ::1 at 2022-01-10 09:39:14 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/railties-7.0.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/railties-7.0.0/lib/rails/templates/rails/welcome/index.html.erb (Duration: 39.0ms | Allocations: 561)
+Completed 200 OK in 146ms (Views: 72.5ms | ActiveRecord: 0.0ms | Allocations: 5118)
+
+
+Started PUT "/api/v1/messages/yoyoyogag" for ::1 at 2022-01-10 09:40:07 -0500
+Processing by Api::V1::MessagesController#new as */*
+  Parameters: {"direction"=>"inbound", "username"=>"TAYLORWS", "composed_at"=>"2018-01-16T16:34:12+00:00", "platform_received_at"=>"2018-01-16T16:34:12+00:00", "read_at"=>"2018-01-16T16:34:24+00:00", "message_type"=>"text", "body"=>"Got any fishes?", "handle"=>"yoyoyogag", "message"=>{"direction"=>"inbound", "username"=>"TAYLORWS", "message_type"=>"text", "body"=>"Got any fishes?", "composed_at"=>"2018-01-16T16:34:12+00:00", "platform_received_at"=>"2018-01-16T16:34:12+00:00"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:11:in `new'
+  [1m[36mMessage Create (2.6ms)[0m  [1m[32mINSERT INTO "messages" ("direction", "username", "message_type", "body", "composed_at", "platform_received_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["direction", "inbound"], ["username", "TAYLORWS"], ["message_type", "text"], ["body", "Got any fishes?"], ["composed_at", "2018-01-16T16:34:12+00:00"], ["platform_received_at", "2018-01-16T16:34:12+00:00"], ["created_at", "2022-01-10 14:40:07.680409"], ["updated_at", "2022-01-10 14:40:07.680409"]]
+  ↳ app/controllers/api/v1/messages_controller.rb:11:in `new'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:11:in `new'
+Completed 200 OK in 46ms (Views: 0.2ms | ActiveRecord: 19.0ms | Allocations: 7732)
+
+

@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: MyString
+  display_identifier: MyString
+  sort: 1
+  order_number: MyString
+  load_status: MyString
+  load_status_label: MyString
+  active: false
+  current: false
+
+two:
+  id: MyString
+  display_identifier: MyString
+  sort: 1
+  order_number: MyString
+  load_status: MyString
+  load_status_label: MyString
+  active: false
+  current: false
