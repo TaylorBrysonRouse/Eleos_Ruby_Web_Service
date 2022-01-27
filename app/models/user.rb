@@ -5,3 +5,5 @@ class User < ApplicationRecord
   validates :custom_settings_form_code, presence: true
   validates :dashboard_code, presence: true
 end
+
+#Comment
